@@ -36,20 +36,6 @@ By understanding where the money goes and how priorities are set, citizens can h
 
 ---
 
-## How It Works
-
-Each domain folder in this repository (e.g., `austintaxrateelection.com/`, `votenoaustin.com/`) contains a **self-contained, mobile-first HTML site** that:
-
-- Explains the TRE in plain language
-- Displays budget trend charts with commentary
-- Cites data sources clearly
-- Uses a neutral blue/white theme for readability
-- Links to official election and voting resources
-
-All sites share a central `images/` folder containing the referenced charts.
-
----
-
 ## Data Sources
 
 - City of Austin **Approved Budget Books** (FY2015–FY2026)
