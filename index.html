@@ -24,11 +24,11 @@
     :root {
       /* Warm, vintage color palette */
       --rust: #C84C31;
-      --cream: #FDF5E6;
+      --cream: #FAF7F2;
       --sage: #8B9D83;
       --brown: #4A3B2C;
       --orange: #D4804D;
-      --tan: #E6D5AC;
+      --tan: #F2EBD9;
       
       /* Functional colors */
       --bg: var(--cream);
@@ -217,62 +217,64 @@
     </div>
 
     <!-- Card: Debt service + chart (output 4) -->
-    <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
-      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
+    <div class="vintage-card" style="margin-top:20px;">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
         <div>
-          <h3 style="font-size:1.05rem;margin:6px 0 8px;">Debt service</h3>
-          <p style="margin:10px 0;">General Office debt service roughly <strong>doubled</strong> from about <strong>$149M</strong> to ~<strong>$288M</strong> yearly—about <strong>1 in 5</strong> General Fund dollars goes to interest/principal.</p>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Debt service</h3>
+          <p style="margin:10px 0;font-size:1.1rem;">General Office debt service roughly <strong style="color:var(--accent)">doubled</strong> from about <strong style="color:var(--accent)">$149M</strong> to ~<strong style="color:var(--accent)">$288M</strong> yearly.</p>
+          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">1 in 5 General Fund dollars goes to interest/principal</div>
         </div>
-        <figure style="margin:0;border:1px solid #e9edf2;border-radius:12px;overflow:hidden;background:#fff;">
+        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
           <img src="../images/output%20(4).png" alt="Debt Service vs General Fund Revenue (2015–2026)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:.9rem;color:#60656f;padding:10px 12px;border-top:1px solid #e9edf2;"><strong>Debt Service vs General Fund Revenue (2015–2026)</strong></figcaption>
+          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Debt Service vs General Fund Revenue (2015–2026)</strong></figcaption>
         </figure>
       </div>
     </div>
 
     <!-- Card: Internal services + FTE chart (output 5) -->
-    <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
-      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
+    <div class="vintage-card" style="margin-top:20px;">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
         <div>
-          <h3 style="font-size:1.05rem;margin:6px 0 8px;">Internal services</h3>
-          <p style="margin:10px 0;">“Internal Services &amp; Transfers” totals <strong>$500M+</strong> per year—larger than Parks, Libraries, and Public Health combined. Support-area headcount has grown notably since 2015.</p>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Internal services</h3>
+          <p style="margin:10px 0;font-size:1.1rem;">"Internal Services &amp; Transfers" totals <strong style="color:var(--accent)">$500M+</strong> per year—larger than Parks, Libraries, and Public Health combined.</p>
+          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">Support-area headcount has grown notably since 2015</div>
         </div>
-        <figure style="margin:0;border:1px solid #e9edf2;border-radius:12px;overflow:hidden;background:#fff;">
+        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
           <img src="../images/output%20(5).png" alt="FTE Growth by Department (FY 2015 vs FY 2026)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:.9rem;color:#60656f;padding:10px 12px;border-top:1px solid #e9edf2;"><strong>FTE Growth by Department (FY 2015 vs FY 2026)</strong></figcaption>
-        </figure>
-              </div>
-      </div>
-
-      <!-- Card: Internal services vs Parks/Libraries/Public Health + chart (output 23) -->
-      <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
-        <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-          <div>
-            <h3 style="font-size:1.05rem;margin:6px 0 8px;">Internal services vs parks, libraries, public health</h3>
-            <p style="margin:10px 0;">In FY2026, “Internal Services &amp; Transfers” is larger than Parks, Libraries, and Public Health combined, highlighting tradeoffs in support vs. frontline services.</p>
-          </div>
-          <figure style="margin:0;border:1px solid #e9edf2;border-radius:12px;overflow:hidden;background:#fff;">
-            <img src="../images/output%20(23).png" alt="Internal Services & Transfers vs Parks, Libraries, Public Health (FY 2026)" style="display:block;width:100%;height:auto;" />
-            <figcaption style="font-size:.9rem;color:#60656f;padding:10px 12px;border-top:1px solid #e9edf2;"><strong>Internal Services &amp; Transfers vs Parks, Libraries, Public Health (FY 2026)</strong></figcaption>
-          </figure>
-        </div>
-      </div>
- 
-      <!-- Card: Austin Energy context + chart (output 22) -->
-    <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
-      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-size:1.05rem;margin:6px 0 8px;">Austin Energy context</h3>
-          <p style="margin:10px 0;">Austin Energy’s budget is up ~<strong>67%</strong> since 2015, while electricity delivered is up ~<strong>30%</strong>.</p>
-        </div>
-        <figure style="margin:0;border:1px solid #e9edf2;border-radius:12px;overflow:hidden;background:#fff;">
-          <img src="../images/output%20(22).png" alt="Austin Energy Budget vs Electricity Delivered (2015–2025)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:.9rem;color:#60656f;padding:10px 12px;border-top:1px solid #e9edf2;"><strong>Austin Energy Budget vs Electricity Delivered (2015–2025)</strong></figcaption>
+          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>FTE Growth by Department (FY 2015 vs FY 2026)</strong></figcaption>
         </figure>
       </div>
     </div>
 
-    <p style="font-size:.95rem;color:#60656f;margin:10px 0;">Figures rounded; derived from City of Austin budget documents (2015–2026) and compiled analyses.</p>
+    <!-- Card: Internal services vs Parks/Libraries/Public Health + chart (output 23) -->
+    <div class="vintage-card" style="margin-top:20px;">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Internal services vs parks, libraries, public health</h3>
+          <p style="margin:10px 0;font-size:1.1rem;">In FY2026, "Internal Services &amp; Transfers" is larger than Parks, Libraries, and Public Health combined, highlighting tradeoffs in support vs. frontline services.</p>
+        </div>
+        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
+          <img src="../images/output%20(23).png" alt="Internal Services & Transfers vs Parks, Libraries, Public Health (FY 2026)" style="display:block;width:100%;height:auto;" />
+          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Internal Services &amp; Transfers vs Parks, Libraries, Public Health (FY 2026)</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Card: Austin Energy context + chart (output 22) -->
+    <div class="vintage-card" style="margin-top:20px;">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Austin Energy context</h3>
+          <p style="margin:10px 0;font-size:1.1rem;">Austin Energy's budget is up <strong style="color:var(--accent)">~67%</strong> since 2015, while electricity delivered is up <strong style="color:var(--accent)">~30%</strong>.</p>
+        </div>
+        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
+          <img src="../images/output%20(22).png" alt="Austin Energy Budget vs Electricity Delivered (2015–2025)" style="display:block;width:100%;height:auto;" />
+          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Austin Energy Budget vs Electricity Delivered (2015–2025)</strong></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p style="font-size:0.95rem;color:var(--muted);margin:20px 0;">Figures rounded; derived from City of Austin budget documents (2015–2026) and compiled analyses.</p>
   </section>
 
   <section id="positions">
@@ -314,6 +316,7 @@
       </div>
     </div>
   </section>
+  <br/>
 
   <section id="vote" class="vintage-card">
     <h2 class="retro-title" style="font-size:2rem;margin:0 0 20px;">Election timeline & voting</h2>
