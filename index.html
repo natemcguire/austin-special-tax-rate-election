@@ -14,67 +14,204 @@
 
     gtag('config', 'G-D19QV3FBGY');
   </script>
+  
+  <!-- Retro Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Warm, vintage color palette */
+      --rust: #C84C31;
+      --cream: #FDF5E6;
+      --sage: #8B9D83;
+      --brown: #4A3B2C;
+      --orange: #D4804D;
+      --tan: #E6D5AC;
+      
+      /* Functional colors */
+      --bg: var(--cream);
+      --text: var(--brown);
+      --accent: var(--rust);
+      --muted: var(--sage);
+      --highlight: var(--orange);
+      --surface: var(--tan);
+    }
+    
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Bitter', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B9D83' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .retro-title {
+      font-family: 'Alfa Slab One', cursive;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-shadow: 2px 2px 0 var(--surface),
+                   4px 4px 0 rgba(0,0,0,0.1);
+    }
+
+    .vintage-card {
+      background: var(--surface);
+      border: 2px solid var(--text);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .vintage-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+    }
+
+    .retro-nav {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .retro-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border: 2px solid var(--text);
+      border-radius: 4px;
+      background: var(--surface);
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .retro-nav a:hover {
+      background: var(--accent);
+      color: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    .retro-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: var(--accent);
+      color: var(--cream);
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9em;
+      transform: rotate(-2deg);
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+    }
+
+    .wiggle:hover {
+      animation: wiggle 0.5s ease infinite;
+    }
+    
+    /* Modern card animations */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-slide-up {
+      animation: slideUp 0.6s ease-out forwards;
+    }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+    
+    /* Pulse animation for important elements */
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+  </style>
 </head>
-<body style="margin:0;background:linear-gradient(115deg,#f5f7fb 0%, #ffffff 45%, #fafbfe 100%);color:#111316;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;">
-<header style="position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid #e9edf2;z-index:8;">
-  <div role="navigation" aria-label="Section navigation" style="max-width:900px;margin-inline:auto;padding:0 16px;display:flex;gap:14px;overflow:auto;padding-top:10px;padding-bottom:10px;">
-    <a href="#what" style="white-space:nowrap;color:#60656f;text-decoration:none;font-weight:600;padding:6px 10px;border-radius:20px;background:#f5f7fb;">What is a TRE?</a>
-    <a href="#key" style="white-space:nowrap;color:#60656f;text-decoration:none;font-weight:600;padding:6px 10px;border-radius:20px;background:#f5f7fb;">Key things to know</a>
-    <a href="#positions" style="white-space:nowrap;color:#60656f;text-decoration:none;font-weight:600;padding:6px 10px;border-radius:20px;background:#f5f7fb;">Perspectives</a>
-    <a href="#effects" style="white-space:nowrap;color:#60656f;text-decoration:none;font-weight:600;padding:6px 10px;border-radius:20px;background:#f5f7fb;">How it affects you</a>
-    <a href="#vote" style="white-space:nowrap;color:#60656f;text-decoration:none;font-weight:600;padding:6px 10px;border-radius:20px;background:#f5f7fb;">Voting info</a>
-    <a href="#sources" style="white-space:nowrap;color:#60656f;text-decoration:none;font-weight:600;padding:6px 10px;border-radius:20px;background:#f5f7fb;">Sources</a>
+<body>
+<header style="position:sticky;top:0;z-index:8;background:var(--bg);border-bottom:2px solid var(--text);">
+  <div class="retro-nav" role="navigation" aria-label="Section navigation" style="max-width:900px;margin-inline:auto;padding:0 16px;">
+    <a href="#what">What is a TRE?</a>
+    <a href="#key">Key things to know</a>
+    <a href="#positions">Perspectives</a>
+    <a href="#effects">How it affects you</a>
+    <a href="#vote">Voting info</a>
   </div>
 </header>
 
 <main style="max-width:900px;margin-inline:auto;padding:0 16px;">
-  <section style="padding:20px 0 6px">
-    <h1 style="font-size:1.6rem;line-height:1.25;margin:20px 0 10px;">Austin Special Tax Rate Election (TRE)</h1>
-    <p style="margin:10px 0;color:#60656f;">
-      Austin City Council has adopted the FY2026 budget and plans to call a <strong>special Tax Rate Election (TRE)</strong> for November. This page explains what a TRE is, what a “for” or “against” vote means, and shares recent budget trends so you can make an informed choice.
+  <section style="padding:40px 0 20px;text-align:center;">
+    <h1 class="retro-title" style="font-size:4rem;line-height:1;margin:20px 0 30px;">Austin Tax Rate<br>Election</h1>
+    <div class="retro-badge wiggle" style="font-size:1.2rem;margin-bottom:20px;">November 2025</div>
+    <p style="margin:20px 0;color:var(--text);font-size:1.2rem;max-width:700px;margin-inline:auto;">
+      Austin City Council has adopted the FY2026 budget and plans to call a <strong style="color:var(--accent);">special Tax Rate Election (TRE)</strong> for November. This page explains what a TRE is, what a "for" or "against" vote means, and shares recent budget trends so you can make an informed choice.
     </p>
   </section>
 
   <section id="what">
-    <h2 style="font-size:1.25rem;margin:28px 0 10px;">What is a TRE?</h2>
-    <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
+    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">What is a TRE?</h2>
+    <div class="vintage-card">
       <ul style="margin:8px 0 8px 20px;">
-        <li>A <strong>Tax Rate Election</strong> asks voters to approve a property tax rate <strong>above the state’s voter-approval rate</strong>.</li>
-        <li>If <strong>approved</strong>, the higher rate applies this year and becomes the base for future years.</li>
-        <li>If <strong>rejected</strong>, the rate defaults to the voter-approval rate and the City must align spending to that lower revenue.</li>
+        <li>A <strong style="color:var(--accent)">Tax Rate Election</strong> asks voters to approve a property tax rate <strong style="color:var(--accent)">above the state's voter-approval rate</strong>.</li>
+        <li>If <strong style="color:var(--accent)">approved</strong>, the higher rate applies this year and becomes the base for future years.</li>
+        <li>If <strong style="color:var(--accent)">rejected</strong>, the rate defaults to the voter-approval rate and the City must align spending to that lower revenue.</li>
       </ul>
-      <p style="font-size:.95rem;color:#60656f;margin:10px 0;">This concerns the <strong>city portion</strong> of your property tax bill (separate from county, school district, hospital, community college, and special districts).</p>
+      <p style="font-size:.95rem;color:var(--muted);margin:10px 0;">This concerns the <strong style="color:var(--accent)">city portion</strong> of your property tax bill (separate from county, school district, hospital, community college, and special districts).</p>
     </div>
   </section>
 
   <section id="key">
-    <h2 style="font-size:1.25rem;margin:28px 0 10px;">Key Things to Know</h2>
+    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Key Things to Know</h2>
 
     <!-- Card: Budget growth vs population + chart (output 11) -->
-    <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
-      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
+    <div class="vintage-card">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
         <div>
-          <h3 style="font-size:1.05rem;margin:6px 0 8px;">Budget growth vs. population</h3>
-          <p style="margin:10px 0;">City budget grew from roughly <strong>$3.5B (2015)</strong> to <strong>$6.3B (2025)</strong>; population rose ~<strong>10%</strong> while total budget rose ~<strong>80%</strong>. <span style="display:inline-block;background:#f5f7fb;padding:2px 8px;border-radius:999px;border:1px solid #e9edf2;font-size:.85rem;color:#60656f;">Even with inflation, that’s ~25–30% real growth</span>.</p>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Budget growth vs. population</h3>
+          <p style="margin:10px 0;font-size:1.1rem;">City budget grew from roughly <strong style="color:var(--accent)">$3.5B (2015)</strong> to <strong style="color:var(--accent)">$6.3B (2025)</strong>; population rose ~<strong style="color:var(--accent)">10%</strong> while total budget rose ~<strong style="color:var(--accent)">80%</strong>.</p>
+          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">Even with inflation, that's ~25–30% real growth</div>
         </div>
-        <figure style="margin:0;border:1px solid #e9edf2;border-radius:12px;overflow:hidden;background:#fff;">
+        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
           <img src="../images/output%20(11).png" alt="Austin Budget vs Population Growth (2015–2025)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:.9rem;color:#60656f;padding:10px 12px;border-top:1px solid #e9edf2;"><strong>Austin Budget vs Population Growth (2015–2025)</strong></figcaption>
+          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Austin Budget vs Population Growth (2015–2025)</strong></figcaption>
         </figure>
       </div>
     </div>
 
     <!-- Card: Per-resident spending + chart (output 12) -->
-    <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:14px 0;">
-      <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
+    <div class="vintage-card" style="margin-top:20px;">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
         <div>
-          <h3 style="font-size:1.05rem;margin:6px 0 8px;">Per-resident spending</h3>
-          <p style="margin:10px 0;">Increased from about <strong>$3,800 (2015)</strong> to about <strong>$6,300 (2025)</strong>.</p>
-          <p style="margin:10px 0;">That means the city is spending $2,500 more per resident than before (per capita basis).</p>
-          <p style="margin:10px 0;">Even accounting for inflation, that's a 25% increase in spending per resident.</p>
-        <figure style="margin:0;border:1px solid #e9edf2;border-radius:12px;overflow:hidden;background:#fff;">
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Per-resident spending</h3>
+          <p style="margin:10px 0;font-size:1.1rem;">Increased from about <strong style="color:var(--accent)">$3,800 (2015)</strong> to about <strong style="color:var(--accent)">$6,300 (2025)</strong>.</p>
+          <p style="margin:10px 0;font-size:1.1rem;">That means the city is spending <strong style="color:var(--accent)">$2,500 more per resident</strong> than before (per capita basis).</p>
+          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">25% increase even after inflation</div>
+        </div>
+        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
           <img src="../images/output%20(12).png" alt="Per-Resident Spending Over Time" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:.9rem;color:#60656f;padding:10px 12px;border-top:1px solid #e9edf2;"><strong>Per-Resident Spending Over Time</strong></figcaption>
+          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Per-Resident Spending Over Time</strong></figcaption>
         </figure>
       </div>
     </div>
@@ -139,19 +276,19 @@
   </section>
 
   <section id="positions">
-    <h2 style="font-size:1.25rem;margin:28px 0 10px;">Perspectives</h2>
-    <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-      <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:0;">
-        <h3 style="font-size:1.05rem;margin:6px 0 8px;">Supporters of a higher rate say</h3>
-        <ul style="margin:8px 0 8px 20px;">
+    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Perspectives</h2>
+    <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="vintage-card">
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Supporters say</h3>
+        <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
           <li>Keeps up with inflation, growth, and service demands.</li>
           <li>Maintains/expands funding for public safety, infrastructure, housing/homelessness, climate goals.</li>
           <li>Avoids cuts to programs residents rely on.</li>
         </ul>
       </div>
-      <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:0;">
-        <h3 style="font-size:1.05rem;margin:6px 0 8px;">Opponents say</h3>
-        <ul style="margin:8px 0 8px 20px;">
+      <div class="vintage-card">
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Opponents say</h3>
+        <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
           <li>Spending growth outpaces population and measurable outputs.</li>
           <li>Support-department costs and rising debt service crowd out frontline services.</li>
           <li>Higher city taxes add to affordability pressures for homeowners and renters.</li>
@@ -161,37 +298,37 @@
   </section>
 
   <section id="effects">
-    <h2 style="font-size:1.25rem;margin:28px 0 10px;">How a TRE could affect you</h2>
-    <div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-      <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:0;">
-        <h3 style="font-size:1.05rem;margin:6px 0 8px;">Homeowners</h3>
-        <p style="margin:10px 0;">City tax rate × taxable value = city bill. Homestead exemptions help, but higher rates generally raise most bills.</p>
+    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">How a TRE could affect you</h2>
+    <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div class="vintage-card">
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Homeowners</h3>
+        <p style="margin:10px 0;font-size:1.1rem;">City tax rate × taxable value = city bill. Homestead exemptions help, but higher rates generally raise most bills.</p>
       </div>
-      <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:0;">
-        <h3 style="font-size:1.05rem;margin:6px 0 8px;">Renters</h3>
-        <p style="margin:10px 0;">Property taxes are a major landlord expense; rate increases are often passed through to rents over time.</p>
+      <div class="vintage-card">
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Renters</h3>
+        <p style="margin:10px 0;font-size:1.1rem;">Property taxes are a major landlord expense; rate increases are often passed through to rents over time.</p>
       </div>
-      <div style="background:#fafbfe;border:1px solid #e9edf2;border-radius:12px;padding:14px;margin:0;">
-        <h3 style="font-size:1.05rem;margin:6px 0 8px;">Small businesses</h3>
-        <p style="margin:10px 0;">Commercial properties don’t have a homestead cap; rate changes flow directly into operating costs.</p>
+      <div class="vintage-card">
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Small businesses</h3>
+        <p style="margin:10px 0;font-size:1.1rem;">Commercial properties don't have a homestead cap; rate changes flow directly into operating costs.</p>
       </div>
     </div>
   </section>
 
-  <section id="vote">
-    <h2 style="font-size:1.25rem;margin:28px 0 10px;">Election timeline &amp; voting</h2>
-    <ul style="margin:8px 0 8px 20px;">
-      <li><strong>Election Day:</strong> TBD</li>
-      <li><strong>Early Voting:</strong> TBD</li>
-      <li><strong>Voter Registration Deadline:</strong> TBD</li>
-      <li><strong>Where to vote:</strong> TBD</li>
+  <section id="vote" class="vintage-card">
+    <h2 class="retro-title" style="font-size:2rem;margin:0 0 20px;">Election timeline & voting</h2>
+    <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
+      <li><strong style="color:var(--accent)">Election Day:</strong> TBD</li>
+      <li><strong style="color:var(--accent)">Early Voting:</strong> TBD</li>
+      <li><strong style="color:var(--accent)">Voter Registration Deadline:</strong> TBD</li>
+      <li><strong style="color:var(--accent)">Where to vote:</strong> TBD</li>
     </ul>
-    <p style="font-size:.95rem;color:#60656f;margin:10px 0;">Ballot language and the exact rate will be posted here once the City finalizes the election order.</p>
+    <p style="font-size:0.95rem;color:var(--muted);margin:10px 0;">Ballot language and the exact rate will be posted once the City finalizes the election order.</p>
   </section>
 
-  <section id="sources" style="color:#60656f;border-top:1px solid #e9edf2;padding:20px 0 60px;">
-    <h2 style="font-size:1.25rem;margin:28px 0 10px;color:#111316;">Sources &amp; Methodology</h2>
-    <ul style="margin:8px 0 8px 20px;">
+  <section id="sources" style="color:var(--muted);border-top:2px solid var(--text);padding:20px 0 60px;margin-top:40px;">
+    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Sources & Methodology</h2>
+    <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
       <li>Primary sources: City of Austin Approved Budget Books and CAFRs, FY2015–FY2026; Austin Energy financial and operating reports.</li>
       <li>Figures are rounded for clarity. Where departments were reorganized, series were stitched using City notes to keep apples-to-apples.</li>
       <li>Charts reflect publicly available numbers. If you spot an error, please share a correction with a citation and page number.</li>
