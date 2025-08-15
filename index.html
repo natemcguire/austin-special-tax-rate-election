@@ -21,6 +21,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 180px; /* Increased padding for better visibility */
+    }
+    
     :root {
       /* Warm, vintage color palette */
       --rust: #C84C31;
@@ -152,15 +157,34 @@
 </head>
 <body>
 <header style="position:sticky;top:0;z-index:8;background:var(--bg);border-bottom:2px solid var(--text);">
-  <div class="retro-nav" role="navigation" aria-label="Section navigation" style="max-width:400px;margin-inline:auto;padding:16px;">
-    <div style="display:grid;gap:8px;grid-template-columns:1fr 1fr;">
-      <a href="#what" style="text-align:center;display:block;width:100%;padding:12px;">What is a TRE?</a>
-      <a href="#key" style="text-align:center;display:block;width:100%;padding:12px;">Key things to know</a>
-      <a href="#positions" style="text-align:center;display:block;width:100%;padding:12px;">Perspectives</a>
-      <a href="#effects" style="text-align:center;display:block;width:100%;padding:12px;">How it affects you</a>
-      <a href="#vote" style="text-align:center;display:block;width:100%;padding:12px;grid-column:1/-1;">Voting info</a>
+  <div class="retro-nav" role="navigation" aria-label="Section navigation" style="max-width:900px;margin-inline:auto;padding:12px 16px;">
+    <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;">
+      <a href="#what" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">What is a TRE?</a>
+      <a href="#key" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Key things to know</a>
+      <a href="#positions" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Perspectives</a>
+      <a href="#effects" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">How it affects you</a>
+      <a href="#vote" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Voting info</a>
     </div>
   </div>
+
+  <style>
+    @media (max-width: 768px) {
+      .retro-nav > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      .retro-nav a:last-child {
+        grid-column: 1/-1;
+      }
+      .retro-nav a {
+        min-width: 0;
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
 </header>
 
 <main style="max-width:900px;margin-inline:auto;padding:0 16px;">
@@ -172,7 +196,8 @@
     </p>
   </section>
 
-  <section id="what">
+  <div id="what"></div>
+  <section>
     <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">What is a TRE?</h2>
     <div class="vintage-card">
       <ul style="margin:8px 0 8px 20px;">
@@ -184,7 +209,8 @@
     </div>
   </section>
 
-  <section id="key">
+  <div id="key"></div>
+  <section>
     <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Key Things to Know</h2>
 
     <!-- Card: Budget growth vs population + chart (output 11) -->
@@ -279,29 +305,47 @@
     <p style="font-size:0.95rem;color:var(--muted);margin:20px 0;">Figures rounded; derived from City of Austin budget documents (2015–2026) and compiled analyses.</p>
   </section>
 
-  <section id="positions">
+  <div id="positions"></div>
+  <section>
     <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Perspectives</h2>
     <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
       <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Supporters say</h3>
-        <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
-          <li>Keeps up with inflation, growth, and service demands.</li>
-          <li>Maintains/expands funding for public safety, infrastructure, housing/homelessness, climate goals.</li>
-          <li>Avoids cuts to programs residents rely on.</li>
-        </ul>
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Supporters claim:</h3>
+        <div style="margin:0 0 20px;">
+          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;">"It just keeps up with inflation"</div>
+          <p style="margin:8px 0;font-size:1.1rem;color:var(--muted);">Even though the budget has been outpacing both inflation and population growth for years.</p>
+        </div>
+        <div style="margin:0 0 20px;">
+          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;">"It funds public safety"</div>
+          <p style="margin:8px 0;font-size:1.1rem;color:var(--muted);">While police staffing and response times have lagged despite record spending.</p>
+        </div>
+        <div style="margin:0 0 20px;">
+          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;">"It avoids cuts"</div>
+          <p style="margin:8px 0;font-size:1.1rem;color:var(--muted);">Which really means no pressure to trim bloated departments or fix inefficiencies, even after approving an additional $100 million for homeless services on top of last budget's $550 million, with little visible improvement.</p>
+        </div>
       </div>
+
       <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Opponents say</h3>
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Vote No — Opponents say:</h3>
         <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
-          <li>Spending growth outpaces population and measurable outputs.</li>
-          <li>Support-department costs and rising debt service crowd out frontline services.</li>
-          <li>Higher city taxes add to affordability pressures for homeowners and renters.</li>
+          <li style="margin-bottom:12px;">The various NGOs — especially those in the homelessness industry — are unaccountable and now getting even more taxpayer money (+$100M on top of last year's $550M), with few results.</li>
+          
+          <li style="margin-bottom:12px;">Police and core public services should be prioritized before expanding bureaucracy and pet projects.</li>
+          
+          <li style="margin-bottom:12px;">City Council has lost touch with residents, ignoring the realities of a rapidly deteriorating civic life.</li>
+          
+          <li style="margin-bottom:12px;">City spending is growing far faster than the city itself, with little to show in improved services.</li>
+          
+          <li style="margin-bottom:12px;">Bureaucratic overhead and rising debt service crowd out dollars that should be going to frontline needs.</li>
+          
+          <li style="margin-bottom:12px;">Higher city taxes pile onto rising housing costs, pushing both homeowners and renters closer to the breaking point.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="effects">
+  <div id="effects"></div>
+  <section>
     <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">How a TRE could affect you</h2>
     <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
       <div class="vintage-card">
@@ -320,7 +364,8 @@
   </section>
   <br/>
 
-  <section id="vote" class="vintage-card">
+  <div id="vote"></div>
+  <section class="vintage-card">
     <h2 class="retro-title" style="font-size:2rem;margin:0 0 20px;">Election timeline & voting</h2>
     <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
       <li><strong style="color:var(--accent)">Election Day:</strong> TBD</li>
@@ -331,7 +376,8 @@
     <p style="font-size:0.95rem;color:var(--muted);margin:10px 0;">Ballot language and the exact rate will be posted once the City finalizes the election order.</p>
   </section>
 
-  <section id="sources" style="color:var(--muted);border-top:2px solid var(--text);padding:20px 0 60px;margin-top:40px;">
+  <div id="sources"></div>
+  <section style="color:var(--muted);border-top:2px solid var(--text);padding:20px 0 60px;margin-top:40px;">
     <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Sources & Methodology</h2>
     <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
       <li>Primary sources: City of Austin Approved Budget Books and CAFRs, FY2015–FY2026; Austin Energy financial and operating reports.</li>
