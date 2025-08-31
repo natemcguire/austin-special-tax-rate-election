@@ -153,6 +153,93 @@
     .pulse {
       animation: pulse 2s infinite;
     }
+
+    /* Contact Form Popup Styles */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--cream);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .popup h3 {
+      font-family: 'Alfa Slab One', cursive;
+      color: var(--accent);
+      font-size: 1.4rem;
+      margin: 0 0 16px;
+    }
+
+    .popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .popup-form input[type="email"] {
+      padding: 8px 12px;
+      border: 2px solid var(--text);
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .popup-form button {
+      background: var(--accent);
+      color: var(--cream);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .popup-form button:hover {
+      transform: translateY(-1px);
+    }
+
+    .popup-form label {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .popup-form input[type="checkbox"] {
+      margin-top: 3px;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text);
+      padding: 4px;
+      line-height: 1;
+    }
   </style>
 </head>
 <body>
@@ -160,7 +247,7 @@
   <div class="retro-nav" role="navigation" aria-label="Section navigation" style="max-width:900px;margin-inline:auto;padding:12px 16px;">
     <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;">
       <a href="#what" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">What is a TRE?</a>
-      <a href="#key" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Key things to know</a>
+      <a href="#key" style="text-align:center;padding:8px 16px;border:2px solid var(--accent);background:var(--accent);color:var(--cream);white-space:nowrap;font-weight:700;">Key things to know</a>
       <a href="#positions" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Perspectives</a>
       <a href="#effects" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">How it affects you</a>
       <a href="#vote" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Voting info</a>
@@ -190,10 +277,74 @@
 <main style="max-width:900px;margin-inline:auto;padding:0 16px;">
   <section style="padding:40px 0 20px;text-align:center;">
     <h1 class="retro-title" style="font-size:4rem;line-height:1;margin:20px 0 30px;">Austin Tax Rate<br>Election</h1>
-    <div class="retro-badge wiggle" style="font-size:1.2rem;margin-bottom:20px;">November 2025</div>
+    <div class="retro-badge wiggle" style="font-size:1.2rem;margin-bottom:20px;">Vote Tuesday, November 4, 2025</div>
     <p style="margin:20px 0;color:var(--text);font-size:1.2rem;max-width:700px;margin-inline:auto;">
-      Austin City Council has adopted the FY2026 budget and plans to call a <strong style="color:var(--accent);">special Tax Rate Election (TRE)</strong> for November. This page explains what a TRE is, what a "for" or "against" vote means, and shares recent budget trends so you can make an informed choice.
+      Austin City Council has adopted the FY2026 budget and called a <strong style="color:var(--accent);">special Tax Rate Election (TRE)</strong> for November. This page explains what a TRE is, what a "for" or "against" vote means, and shares recent budget trends so you can make an informed choice.
     </p>
+
+    <!-- Latest Updates Card -->
+    <div class="vintage-card" style="margin:30px auto;max-width:800px;text-align:left;">
+      <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Prop Q at a Glance</h3>
+          <ul style="margin:0;padding:0;list-style:none;">
+            <li style="margin-bottom:12px;font-size:1.1rem;">
+              <strong>Rate:</strong> 57.4¢ per $100
+              <a href="https://www.kut.org" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KUT]</a>
+            </li>
+            <li style="margin-bottom:12px;font-size:1.1rem;">
+              <strong>Increase:</strong> +5¢ above cap
+              <a href="https://www.austintexas.gov" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[City]</a>
+            </li>
+            <li style="margin-bottom:12px;font-size:1.1rem;">
+              <strong>Impact:</strong> ~$25/month for average home
+              <a href="https://cbsaustin.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KEYE]</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Key Dates</h3>
+          <ul style="margin:0;padding:0;list-style:none;">
+            <li style="margin-bottom:12px;font-size:1.1rem;">
+              <strong>Early Voting:</strong> Oct 20–31
+              <a href="https://votetravis.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[Travis County]</a>
+            </li>
+            <li style="margin-bottom:12px;font-size:1.1rem;">
+              <strong>Election Day:</strong> Nov 4, 2025
+              <a href="https://votetexas.gov" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[Vote Texas]</a>
+            </li>
+            <li style="margin-bottom:12px;font-size:1.1rem;">
+              <strong>Revenue:</strong> ~$110M added
+              <a href="https://www.kut.org" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KUT]</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Proposed Funding</h3>
+          <ul style="margin:0;padding:0;list-style:none;">
+            <li style="margin-bottom:8px;font-size:1.1rem;">• Homelessness services</li>
+            <li style="margin-bottom:8px;font-size:1.1rem;">• Parks maintenance</li>
+            <li style="margin-bottom:8px;font-size:1.1rem;">• Public safety programs</li>
+            <li style="margin-bottom:8px;font-size:1.1rem;">• Public health initiatives</li>
+          </ul>
+          <p style="margin:12px 0 0;font-size:0.9rem;color:var(--muted);">
+            Sources: 
+            <a href="https://www.kut.org" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">KUT</a>, 
+            <a href="https://cbsaustin.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">KEYE</a>
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--text);">
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 12px;">Campaign Updates</h3>
+        <p style="margin:0;font-size:1.1rem;">
+          The "Love Austin" campaign has launched in support, emphasizing funding for essential services and community programs.
+          <a href="https://cbsaustin.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KEYE]</a>
+        </p>
+      </div>
+    </div>
   </section>
 
   <div id="what"></div>
@@ -211,7 +362,23 @@
 
   <div id="key"></div>
   <section>
-    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Key Things to Know</h2>
+    <h2 class="retro-title" style="font-size:2.5rem;margin:28px 0 20px;">Key Things to Know</h2>
+    <div class="vintage-card" style="margin-bottom:30px;background:var(--accent);color:var(--cream);">
+      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;font-size:1.8rem;margin:0 0 10px;">80%</h3>
+          <p style="margin:0;font-size:1.1rem;">Budget Growth<br>vs 10% Population Growth</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;font-size:1.8rem;margin:0 0 10px;">$2,500</h3>
+          <p style="margin:0;font-size:1.1rem;">More Spending<br>Per Resident</p>
+        </div>
+        <div>
+          <h3 style="font-family:'Alfa Slab One',cursive;font-size:1.8rem;margin:0 0 10px;">$500M+</h3>
+          <p style="margin:0;font-size:1.1rem;">Internal Services<br>& Transfers</p>
+        </div>
+      </div>
+    </div>
 
     <!-- Card: Budget growth vs population + chart (output 11) -->
     <div class="vintage-card">
@@ -383,14 +550,43 @@
 
   <div id="vote"></div>
   <section class="vintage-card">
-    <h2 class="retro-title" style="font-size:2rem;margin:0 0 20px;">Election timeline & voting</h2>
-    <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
-      <li><strong style="color:var(--accent)">Election Day:</strong> TBD</li>
-      <li><strong style="color:var(--accent)">Early Voting:</strong> TBD</li>
-      <li><strong style="color:var(--accent)">Voter Registration Deadline:</strong> TBD</li>
-      <li><strong style="color:var(--accent)">Where to vote:</strong> TBD</li>
-    </ul>
-    <p style="font-size:0.95rem;color:var(--muted);margin:10px 0;">Ballot language and the exact rate will be posted once the City finalizes the election order.</p>
+    <h2 class="retro-title" style="font-size:2rem;margin:0 0 20px;">Election Information</h2>
+    <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+      <div>
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Key Dates</h3>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:12px;font-size:1.1rem;">
+            <strong>Election Day:</strong> Tuesday, November 4, 2025
+            <div style="font-size:0.9rem;color:var(--muted);margin-top:4px;">7am – 7pm</div>
+          </li>
+          <li style="margin-bottom:12px;font-size:1.1rem;">
+            <strong>Early Voting:</strong> October 20–31, 2025
+            <div style="font-size:0.9rem;color:var(--muted);margin-top:4px;">Times vary by location</div>
+          </li>
+          <li style="margin-bottom:12px;font-size:1.1rem;">
+            <strong>Last Day to Register:</strong> October 7, 2025
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Voting Resources</h3>
+        <ul style="margin:0;padding:0;list-style:none;">
+          <li style="margin-bottom:12px;font-size:1.1rem;">
+            <strong>Find Your Polling Place:</strong><br>
+            <a href="https://votetravis.com" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">VoteTravis.com</a>
+          </li>
+          <li style="margin-bottom:12px;font-size:1.1rem;">
+            <strong>Register to Vote:</strong><br>
+            <a href="https://votetexas.gov" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">VoteTexas.gov</a>
+          </li>
+          <li style="margin-bottom:12px;font-size:1.1rem;">
+            <strong>What to Bring:</strong><br>
+            <a href="https://votetexas.gov/register-to-vote/need-id.html" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">Voter ID Requirements</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <div id="sources"></div>
@@ -403,5 +599,63 @@
     </ul>
   </section>
 </main>
+
+<!-- Contact Form Popup -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup">
+    <button class="close-popup" onclick="closePopup()">×</button>
+    <h3>Stay Informed</h3>
+    <p style="margin:0 0 16px;font-size:1.1rem;color:var(--text);">Sign up to get updates about Austin news and local politics:</p>
+    
+    <form class="popup-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeMDnIH_PoIjau2Bm09tJezXfK_0gYNfFDGNoXam4dYI-bZ1A/formResponse"
+      method="POST" target="hidden_iframe" onsubmit="submitted=true;" style="display:flex;flex-direction:column;gap:16px;">
+      <div style="position:relative;">
+        <input type="email" name="entry.1631733175" placeholder="Your email address" required
+          style="width:100%;padding:12px;border:2px solid var(--text);border-radius:6px;font-size:1rem;background:var(--bg);color:var(--text);">
+      </div>
+      <button type="submit" class="vintage-card" 
+        style="background:var(--accent);color:var(--cream);border:none;padding:12px 24px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:all 0.2s ease;">
+        Stay Informed
+      </button>
+    </form>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <div id="thanks" style="display:none;margin-top:16px;padding:16px;background:var(--surface);border-radius:6px;text-align:center;color:var(--accent);font-weight:700;font-size:1.1rem;">
+      🎉 Thanks — you're on the list!
+    </div>
+    <script>
+      let submitted = false;
+      document.getElementById('hidden_iframe').addEventListener('load', function () {
+        if (submitted) {
+          document.querySelector('.popup-form').style.display = 'none';
+          document.getElementById('thanks').style.display = 'block';
+        }
+      });
+    </script>
+  </div>
+</div>
+
+<script>
+// Popup functionality
+function showPopup() {
+  document.getElementById('popupOverlay').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closePopup() {
+  document.getElementById('popupOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Show popup after 5 seconds
+setTimeout(showPopup, 5000);
+
+// Close popup when clicking outside
+document.getElementById('popupOverlay').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closePopup();
+  }
+});
+</script>
 </body>
 </html>
