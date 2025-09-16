@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Austin Special Tax Rate Election (TRE)</title>
   <meta name="description" content="See recent news and data on the upcoming Austin Special Tax Rate Election (TRE). Learn about the tax increase and how to keep Austin beautiful." />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://austintaxrateelection.com/" />
@@ -25,162 +25,583 @@
   <meta name="twitter:description" content="Austin's Nov 2025 Tax Rate Election proposes a 5¢ increase (+$110M revenue). Average homeowner impact: ~$25/month. Early voting Oct 20-31. Get the facts." />
   <meta name="twitter:image" content="https://austintaxrateelection.com/images/GzhoO63WIAA9lZi.jpeg" />
   <meta name="twitter:image:alt" content="Austin residents holding signs about the tax rate election" />
-  
+
   <!-- Additional SEO -->
   <meta name="author" content="Austin Tax Rate Election" />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#C84C31" />
+  <meta name="theme-color" content="#D32F2F" />
   <link rel="canonical" href="https://austintaxrateelection.com/" />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-D19QV3FBGY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-D19QV3FBGY');
   </script>
-  
-  <!-- Retro Fonts -->
+
+  <!-- Modern Fonts with Better Hierarchy -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bitter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <style>
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 180px; /* Increased padding for better visibility */
+      scroll-padding-top: 100px;
     }
-    
+
     :root {
-      /* Warm, vintage color palette */
-      --rust: #C84C31;
-      --cream: #FAF7F2;
-      --sage: #8B9D83;
-      --brown: #4A3B2C;
-      --orange: #D4804D;
-      --tan: #F2EBD9;
-      
-      /* Functional colors */
-      --bg: var(--cream);
-      --text: var(--brown);
-      --accent: var(--rust);
-      --muted: var(--sage);
-      --highlight: var(--orange);
-      --surface: var(--tan);
+      /* Enhanced color palette for urgency and readability */
+      --danger-red: #D32F2F;
+      --alert-orange: #F57C00;
+      --warning-yellow: #FFA726;
+      --dark-navy: #1A237E;
+      --light-blue: #E3F2FD;
+      --pure-white: #FFFFFF;
+      --off-white: #F5F5F5;
+      --dark-gray: #212121;
+      --medium-gray: #616161;
+      --light-gray: #E0E0E0;
+      --success-green: #2E7D32;
+
+      /* Functional assignments */
+      --bg: var(--pure-white);
+      --text: var(--dark-gray);
+      --text-muted: var(--medium-gray);
+      --accent: var(--danger-red);
+      --accent-hover: #B71C1C;
+      --warning: var(--alert-orange);
+      --info: var(--dark-navy);
+      --surface: var(--off-white);
+      --border: var(--light-gray);
     }
-    
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
-      margin: 0;
-      font-family: 'Bitter', Georgia, serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: var(--text);
       background: var(--bg);
-      background-image: 
-        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B9D83' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      font-weight: 400;
     }
 
-    .retro-title {
-      font-family: 'Alfa Slab One', cursive;
+    /* Typography Hierarchy */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      text-shadow: 2px 2px 0 var(--surface),
-                   4px 4px 0 rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
     }
 
-    .vintage-card {
-      background: var(--surface);
-      border: 2px solid var(--text);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
-      transition: transform 0.2s ease;
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--dark-navy);
+      margin: 3rem 0 1.5rem;
+      position: relative;
+      padding-left: 1rem;
     }
 
-    .vintage-card:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
     }
 
-    .retro-nav {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding: 10px 0;
-    }
-
-    .retro-nav a {
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.3;
       color: var(--text);
+      margin: 1.5rem 0 1rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      color: var(--text);
+    }
+
+    strong {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Interactive Navigation */
+    .nav-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--pure-white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container.scrolled {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      padding: 8px 16px;
-      border: 2px solid var(--text);
-      border-radius: 4px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--accent);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .nav-link:hover::before {
+      left: 0;
+    }
+
+    .nav-link-regular {
+      color: var(--text);
       background: var(--surface);
-      white-space: nowrap;
-      transition: all 0.2s ease;
+      border-color: var(--border);
     }
 
-    .retro-nav a:hover {
+    .nav-link-regular:hover {
+      color: var(--pure-white);
+      border-color: var(--accent);
+    }
+
+    .nav-link-primary {
+      color: var(--pure-white);
       background: var(--accent);
-      color: var(--cream);
+      font-weight: 700;
+      animation: pulse-attention 2s infinite;
+    }
+
+    .nav-link-primary:hover {
+      background: var(--accent-hover);
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
     }
 
-    .retro-badge {
+    @keyframes pulse-attention {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--light-blue) 0%, var(--pure-white) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(211, 47, 47, 0.05) 0%, transparent 70%);
+      animation: rotate 30s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .countdown-timer {
       display: inline-block;
-      padding: 4px 12px;
-      background: var(--accent);
-      color: var(--cream);
-      border-radius: 4px;
+      background: var(--danger-red);
+      color: var(--pure-white);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 2rem 0;
+      box-shadow: 0 4px 16px rgba(211, 47, 47, 0.3);
+      animation: bounce 2s ease infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: var(--text);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Quick Stats Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--warning));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      border-color: var(--accent);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-muted);
       font-weight: 600;
-      font-size: 0.9em;
-      transform: rotate(-2deg);
     }
 
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(-2deg); }
-      50% { transform: rotate(2deg); }
+    .stat-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-top: 0.5rem;
     }
 
-    .wiggle:hover {
-      animation: wiggle 0.5s ease infinite;
-    }
-    
-    /* Modern card animations */
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .animate-slide-up {
-      animation: slideUp 0.6s ease-out forwards;
-    }
-    
-    /* Gradient text */
-    .gradient-text {
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 800;
-    }
-    
-    /* Pulse animation for important elements */
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
-      50% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
-    }
-    
-    .pulse {
-      animation: pulse 2s infinite;
+    /* Content Cards */
+    .content-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--accent);
     }
 
-    /* Contact Form Popup Styles */
+    .content-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .alert-card {
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+      border-left: 4px solid var(--warning);
+      position: relative;
+    }
+
+    .alert-card::before {
+      content: '⚠️';
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 2rem;
+      opacity: 0.5;
+    }
+
+    .danger-card {
+      background: linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%);
+      border-left: 4px solid var(--danger-red);
+    }
+
+    .info-card {
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      border-left: 4px solid var(--info);
+    }
+
+    /* Interactive Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .badge-danger {
+      background: var(--danger-red);
+      color: var(--pure-white);
+    }
+
+    .badge-danger:hover {
+      background: var(--accent-hover);
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    }
+
+    .badge-warning {
+      background: var(--warning);
+      color: var(--pure-white);
+    }
+
+    .badge-warning:hover {
+      background: #EF6C00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(245, 124, 0, 0.3);
+    }
+
+    .badge-info {
+      background: var(--info);
+      color: var(--pure-white);
+    }
+
+    /* Charts and Images */
+    .chart-container {
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .chart-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+
+    .chart-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .chart-caption {
+      background: var(--dark-navy);
+      color: var(--pure-white);
+      padding: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Perspectives Section */
+    .perspectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .perspective-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .perspective-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.02) 100%);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .perspective-card:hover::before {
+      opacity: 1;
+    }
+
+    .perspective-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .perspective-support {
+      border-top: 4px solid var(--success-green);
+    }
+
+    .perspective-oppose {
+      border-top: 4px solid var(--danger-red);
+    }
+
+    .perspective-item {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .perspective-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Interactive Buttons */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--pure-white);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(211, 47, 47, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--info);
+      color: var(--pure-white);
+    }
+
+    .btn-secondary:hover {
+      background: #1565C0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(26, 35, 126, 0.3);
+    }
+
+    /* Voting Info Section */
+    .voting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .voting-card {
+      background: linear-gradient(135deg, var(--light-blue) 0%, var(--pure-white) 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .voting-card:hover {
+      border-color: var(--info);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .voting-date {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--info);
+      margin-bottom: 0.5rem;
+    }
+
+    .voting-label {
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .voting-detail {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact Form Popup */
     .popup-overlay {
       display: none;
       position: fixed;
@@ -188,9 +609,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       z-index: 1000;
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .popup {
@@ -198,471 +625,568 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: var(--cream);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      max-width: 400px;
+      background: var(--pure-white);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+      max-width: 450px;
       width: 90%;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
     }
 
     .popup h3 {
-      font-family: 'Alfa Slab One', cursive;
       color: var(--accent);
-      font-size: 1.4rem;
-      margin: 0 0 16px;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
     .popup-form {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 1rem;
     }
 
     .popup-form input[type="email"] {
-      padding: 8px 12px;
-      border: 2px solid var(--text);
-      border-radius: 6px;
+      padding: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
       font-size: 1rem;
-      width: 100%;
+      transition: all 0.3s ease;
     }
 
-    .popup-form button {
-      background: var(--accent);
-      color: var(--cream);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .popup-form button:hover {
-      transform: translateY(-1px);
-    }
-
-    .popup-form label {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    .popup-form input[type="checkbox"] {
-      margin-top: 3px;
+    .popup-form input[type="email"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
     }
 
     .close-popup {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 1rem;
+      right: 1rem;
       background: none;
       border: none;
-      font-size: 1.5rem;
+      font-size: 2rem;
       cursor: pointer;
-      color: var(--text);
-      padding: 4px;
-      line-height: 1;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .close-popup:hover {
+      background: var(--surface);
+      color: var(--accent);
+      transform: rotate(90deg);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .nav-inner {
+        padding: 0.75rem;
+      }
+
+      .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .content-card {
+        padding: 1.5rem;
+      }
+
+      .perspectives-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Utility Classes */
+    .text-center { text-align: center; }
+    .text-muted { color: var(--text-muted); }
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    .mt-4 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .mb-3 { margin-bottom: 1.5rem; }
+    .mb-4 { margin-bottom: 2rem; }
+
+    /* Smooth scroll indicator */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--warning));
+      z-index: 101;
+      transition: width 0.3s ease;
+    }
+
+    /* Main container */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-gray);
+      color: var(--pure-white);
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Loading animation for interactive elements */
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    .loading {
+      background: linear-gradient(90deg,
+        var(--surface) 25%,
+        var(--light-gray) 50%,
+        var(--surface) 75%);
+      background-size: 1000px 100%;
+      animation: shimmer 2s infinite;
     }
   </style>
 </head>
 <body>
-<header style="position:sticky;top:0;z-index:8;background:var(--bg);border-bottom:2px solid var(--text);">
-  <div class="retro-nav" role="navigation" aria-label="Section navigation" style="max-width:900px;margin-inline:auto;padding:12px 16px;">
-    <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:center;">
-      <a href="#what" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">What is a TRE?</a>
-      <a href="#key" style="text-align:center;padding:8px 16px;border:2px solid var(--accent);background:var(--accent);color:var(--cream);white-space:nowrap;font-weight:700;">Key things to know</a>
-      <a href="#positions" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Perspectives</a>
-      <a href="#effects" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">How it affects you</a>
-      <a href="#vote" style="text-align:center;padding:8px 16px;border:1px solid var(--text);white-space:nowrap;">Voting info</a>
-    </div>
+
+<!-- Scroll Progress Indicator -->
+<div class="scroll-indicator" id="scrollIndicator"></div>
+
+<!-- Navigation -->
+<nav class="nav-container" id="navContainer">
+  <div class="nav-inner" role="navigation" aria-label="Section navigation">
+    <a href="#what" class="nav-link nav-link-regular">What is a TRE?</a>
+    <a href="#key" class="nav-link nav-link-primary">Key Facts</a>
+    <a href="#perspectives" class="nav-link nav-link-regular">Perspectives</a>
+    <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
+    <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
   </div>
+</nav>
 
-  <style>
-    @media (max-width: 768px) {
-      .retro-nav > div {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-      .retro-nav a:last-child {
-        grid-column: 1/-1;
-      }
-      .retro-nav a {
-        min-width: 0;
-        flex: none;
-        width: 100%;
-      }
-    }
-  </style>
-</header>
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Austin Tax Rate Election</h1>
+      <div class="countdown-timer" id="countdown">Loading countdown...</div>
+      <p class="hero-subtitle">
+        Austin City Council has called a <strong>special Tax Rate Election (TRE)</strong> for November 2025.
+        This critical vote will determine whether property taxes increase by 5¢ per $100 valuation,
+        generating an additional $110M in revenue. Get the facts to make an informed decision.
+      </p>
 
-<main style="max-width:900px;margin-inline:auto;padding:0 16px;">
-  <section style="padding:40px 0 20px;text-align:center;">
-    <h1 class="retro-title" style="font-size:4rem;line-height:1;margin:20px 0 30px;">Austin Tax Rate<br>Election</h1>
-    <div class="retro-badge wiggle" style="font-size:1.2rem;margin-bottom:20px;">Vote Tuesday, November 4, 2025</div>
-    <p style="margin:20px 0;color:var(--text);font-size:1.2rem;max-width:700px;margin-inline:auto;">
-      Austin City Council has adopted the FY2026 budget and called a <strong style="color:var(--accent);">special Tax Rate Election (TRE)</strong> for November. This page explains what a TRE is, what a "for" or "against" vote means, and shares recent budget trends so you can make an informed choice.
-    </p>
-
-    <!-- Latest Updates Card -->
-    <div class="vintage-card" style="margin:30px auto;max-width:800px;text-align:left;">
-      <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Prop Q at a Glance</h3>
-          <ul style="margin:0;padding:0;list-style:none;">
-            <li style="margin-bottom:12px;font-size:1.1rem;">
-              <strong>Rate:</strong> 57.4¢ per $100
-              <a href="https://www.kut.org" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KUT]</a>
-            </li>
-            <li style="margin-bottom:12px;font-size:1.1rem;">
-              <strong>Increase:</strong> +5¢ above cap
-              <a href="https://www.austintexas.gov" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[City]</a>
-            </li>
-            <li style="margin-bottom:12px;font-size:1.1rem;">
-              <strong>Impact:</strong> ~$25/month for average home
-              <a href="https://cbsaustin.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KEYE]</a>
-            </li>
-          </ul>
+      <!-- Quick Stats Dashboard -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">57.4¢</div>
+          <div class="stat-label">Proposed Tax Rate</div>
+          <div class="stat-detail">Per $100 valuation</div>
         </div>
-
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Key Dates</h3>
-          <ul style="margin:0;padding:0;list-style:none;">
-            <li style="margin-bottom:12px;font-size:1.1rem;">
-              <strong>Early Voting:</strong> Oct 20–31
-              <a href="https://votetravis.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[Travis County]</a>
-            </li>
-            <li style="margin-bottom:12px;font-size:1.1rem;">
-              <strong>Election Day:</strong> Nov 4, 2025
-              <a href="https://votetexas.gov" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[Vote Texas]</a>
-            </li>
-            <li style="margin-bottom:12px;font-size:1.1rem;">
-              <strong>Revenue:</strong> ~$110M added
-              <a href="https://www.kut.org" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KUT]</a>
-            </li>
-          </ul>
+        <div class="stat-card">
+          <div class="stat-number">+$110M</div>
+          <div class="stat-label">Additional Revenue</div>
+          <div class="stat-detail">Annual increase</div>
         </div>
-
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Proposed Funding</h3>
-          <ul style="margin:0;padding:0;list-style:none;">
-            <li style="margin-bottom:8px;font-size:1.1rem;">• Homelessness services</li>
-            <li style="margin-bottom:8px;font-size:1.1rem;">• Parks maintenance</li>
-            <li style="margin-bottom:8px;font-size:1.1rem;">• Public safety programs</li>
-            <li style="margin-bottom:8px;font-size:1.1rem;">• Public health initiatives</li>
-          </ul>
-          <p style="margin:12px 0 0;font-size:0.9rem;color:var(--muted);">
-            Sources: 
-            <a href="https://www.kut.org" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">KUT</a>, 
-            <a href="https://cbsaustin.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);">KEYE</a>
-          </p>
+        <div class="stat-card">
+          <div class="stat-number">~$25</div>
+          <div class="stat-label">Monthly Impact</div>
+          <div class="stat-detail">Average homeowner</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Nov 4</div>
+          <div class="stat-label">Election Day</div>
+          <div class="stat-detail">Early voting Oct 20-31</div>
         </div>
       </div>
 
-      <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--text);">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 12px;">Campaign Updates</h3>
-        <p style="margin:0;font-size:1.1rem;">
-          The "Love Austin" campaign has launched in support, emphasizing funding for essential services and community programs.
-          <a href="https://cbsaustin.com" target="_blank" rel="noopener noreferrer" style="color:var(--muted);font-size:0.8rem;margin-left:4px;">[KEYE]</a>
-        </p>
+      <!-- Latest Updates Alert -->
+      <div class="content-card alert-card">
+        <h3>📢 Campaign Updates</h3>
+        <p>The "Love Austin" campaign has launched in support of Prop Q, emphasizing funding for essential services and community programs. Opposition groups are mobilizing around concerns about budget inefficiencies and rising costs.</p>
+        <div class="mt-2">
+          <span class="badge badge-warning">Breaking News</span>
+          <span class="badge badge-info">Updated Today</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <div id="what"></div>
-  <section>
-    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">What is a TRE?</h2>
-    <div class="vintage-card">
-      <ul style="margin:8px 0 8px 20px;">
-        <li>A <strong style="color:var(--accent)">Tax Rate Election</strong> asks voters to approve a property tax rate <strong style="color:var(--accent)">above the state's voter-approval rate</strong>.</li>
-        <li>If <strong style="color:var(--accent)">approved</strong>, the higher rate applies this year and becomes the base for future years.</li>
-        <li>If <strong style="color:var(--accent)">rejected</strong>, the rate defaults to the voter-approval rate and the City must align spending to that lower revenue.</li>
+  <!-- What is a TRE Section -->
+  <section id="what" class="mt-4">
+    <h2>🏛️ Understanding Tax Rate Elections</h2>
+    <div class="content-card info-card">
+      <h3>What You Need to Know</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">✓</span>
+          A <strong>Tax Rate Election (TRE)</strong> asks voters to approve a property tax rate above the state's voter-approval cap
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">✓</span>
+          If <strong>approved</strong>: The higher rate applies immediately and becomes the new baseline for future years
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">✓</span>
+          If <strong>rejected</strong>: The rate defaults to the voter-approval rate, requiring budget adjustments
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">ℹ️</span>
+          This affects only the <strong>city portion</strong> of your property tax (separate from county, school, and special districts)
+        </li>
       </ul>
-      <p style="font-size:.95rem;color:var(--muted);margin:10px 0;">This concerns the <strong style="color:var(--accent)">city portion</strong> of your property tax bill (separate from county, school district, hospital, community college, and special districts).</p>
     </div>
   </section>
 
-  <div id="key"></div>
-  <section>
-    <h2 class="retro-title" style="font-size:2.5rem;margin:28px 0 20px;">Key Things to Know</h2>
-    <div class="vintage-card" style="margin-bottom:30px;background:var(--accent);color:var(--cream);">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;font-size:1.8rem;margin:0 0 10px;">80%</h3>
-          <p style="margin:0;font-size:1.1rem;">Budget Growth<br>vs 10% Population Growth</p>
+  <!-- Key Facts Section -->
+  <section id="key" class="mt-4">
+    <h2>📊 Critical Budget Facts</h2>
+
+    <!-- Alert Stats -->
+    <div class="content-card danger-card mb-3">
+      <div class="stats-grid">
+        <div class="text-center">
+          <div class="stat-number" style="color: var(--danger-red);">80%</div>
+          <div class="stat-label">Budget Growth</div>
+          <div class="stat-detail">vs 10% Population Growth</div>
         </div>
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;font-size:1.8rem;margin:0 0 10px;">$2,500</h3>
-          <p style="margin:0;font-size:1.1rem;">More Spending<br>Per Resident</p>
+        <div class="text-center">
+          <div class="stat-number" style="color: var(--danger-red);">$2,500</div>
+          <div class="stat-label">More Per Resident</div>
+          <div class="stat-detail">Spending increase</div>
         </div>
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;font-size:1.8rem;margin:0 0 10px;">$500M+</h3>
-          <p style="margin:0;font-size:1.1rem;">Internal Services<br>& Transfers</p>
+        <div class="text-center">
+          <div class="stat-number" style="color: var(--danger-red);">$500M+</div>
+          <div class="stat-label">Internal Services</div>
+          <div class="stat-detail">Administrative costs</div>
         </div>
       </div>
     </div>
 
-    <!-- Card: Budget growth vs population + chart (output 11) -->
-    <div class="vintage-card">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Budget growth vs. population</h3>
-          <p style="margin:10px 0;font-size:1.1rem;">City budget grew from roughly <strong style="color:var(--accent)">$3.5B (2015)</strong> to <strong style="color:var(--accent)">$6.3B (2025)</strong>; population rose ~<strong style="color:var(--accent)">10%</strong> while total budget rose ~<strong style="color:var(--accent)">80%</strong>.</p>
-          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">Even with inflation, that's ~25–30% real growth</div>
-        </div>
-        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
-          <img src="../images/output%20(11).png" alt="Austin Budget vs Population Growth (2015–2025)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Austin Budget vs Population Growth (2015–2025)</strong></figcaption>
-        </figure>
+    <!-- Budget Growth Analysis -->
+    <div class="content-card">
+      <h3>Budget Growth vs. Population</h3>
+      <p>City budget exploded from <strong>$3.5B (2015)</strong> to <strong>$6.3B (2025)</strong> while population grew only <strong>~10%</strong>.</p>
+      <div class="badge badge-danger">80% budget increase</div>
+      <div class="badge badge-warning">25-30% real growth after inflation</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(11).png" alt="Austin Budget vs Population Growth (2015–2025)" />
+        <div class="chart-caption">Austin Budget vs Population Growth (2015–2025)</div>
       </div>
     </div>
 
-    <!-- Card: Per-resident spending + chart (output 12) -->
-    <div class="vintage-card" style="margin-top:20px;">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Per-resident spending</h3>
-          <p style="margin:10px 0;font-size:1.1rem;">Increased from about <strong style="color:var(--accent)">$3,800 (2015)</strong> to about <strong style="color:var(--accent)">$6,300 (2025)</strong>.</p>
-          <p style="margin:10px 0;font-size:1.1rem;">That means the city is spending <strong style="color:var(--accent)">$2,500 more per resident</strong> than before (per capita basis).</p>
-          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">25% increase even after inflation</div>
-        </div>
-        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
-          <img src="../images/output%20(12).png" alt="Per-Resident Spending Over Time" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Per-Resident Spending Over Time</strong></figcaption>
-        </figure>
+    <!-- Per-Resident Spending -->
+    <div class="content-card">
+      <h3>Per-Resident Spending Surge</h3>
+      <p>Spending per resident jumped from <strong>$3,800 (2015)</strong> to <strong>$6,300 (2025)</strong>.</p>
+      <div class="badge badge-danger">$2,500 more per person</div>
+      <div class="badge badge-warning">25% increase after inflation</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(12).png" alt="Per-Resident Spending Over Time" />
+        <div class="chart-caption">Per-Resident Spending Growth</div>
       </div>
     </div>
 
-    <!-- Card: Debt service + chart (output 4) -->
-    <div class="vintage-card" style="margin-top:20px;">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Debt service</h3>
-          <p style="margin:10px 0;font-size:1.1rem;">General Office debt service roughly <strong style="color:var(--accent)">doubled</strong> from about <strong style="color:var(--accent)">$149M</strong> to ~<strong style="color:var(--accent)">$288M</strong> yearly.</p>
-          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">1 in 5 General Fund dollars goes to interest/principal</div>
-        </div>
-        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
-          <img src="../images/output%20(4).png" alt="Debt Service vs General Fund Revenue (2015–2026)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Debt Service vs General Fund Revenue (2015–2026)</strong></figcaption>
-        </figure>
+    <!-- Debt Service -->
+    <div class="content-card">
+      <h3>Mounting Debt Burden</h3>
+      <p>General Office debt service nearly <strong>doubled</strong> from <strong>$149M</strong> to <strong>$288M</strong> yearly.</p>
+      <div class="badge badge-danger">1 in 5 dollars goes to debt</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(4).png" alt="Debt Service vs General Fund Revenue" />
+        <div class="chart-caption">Debt Service vs General Fund Revenue</div>
       </div>
     </div>
 
-    <!-- Card: Internal services + FTE chart (output 5) -->
-    <div class="vintage-card" style="margin-top:20px;">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Internal services</h3>
-          <p style="margin:10px 0;font-size:1.1rem;">"Internal Services &amp; Transfers" totals <strong style="color:var(--accent)">$500M+</strong> per year—larger than Parks, Libraries, and Public Health combined.</p>
-          <div class="retro-badge" style="font-size:0.9rem;margin-top:10px;">Support-area headcount has grown notably since 2015</div>
-        </div>
-        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
-          <img src="../images/output%20(5).png" alt="FTE Growth by Department (FY 2015 vs FY 2026)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>FTE Growth by Department (FY 2015 vs FY 2026)</strong></figcaption>
-        </figure>
+    <!-- Internal Services -->
+    <div class="content-card">
+      <h3>Administrative Overhead Crisis</h3>
+      <p>"Internal Services & Transfers" exceeds <strong>$500M annually</strong> — more than Parks, Libraries, and Public Health combined.</p>
+      <div class="badge badge-danger">Bureaucracy over services</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(5).png" alt="FTE Growth by Department" />
+        <div class="chart-caption">Staff Growth by Department</div>
       </div>
     </div>
 
-    <!-- Card: Internal services vs Parks/Libraries/Public Health + chart (output 23) -->
-    <div class="vintage-card" style="margin-top:20px;">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Internal services vs parks, libraries, public health</h3>
-          <p style="margin:10px 0;font-size:1.1rem;">In FY2026, "Internal Services &amp; Transfers" is larger than Parks, Libraries, and Public Health combined, highlighting tradeoffs in support vs. frontline services.</p>
-        </div>
-        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
-          <img src="../images/output%20(23).png" alt="Internal Services & Transfers vs Parks, Libraries, Public Health (FY 2026)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Internal Services &amp; Transfers vs Parks, Libraries, Public Health (FY 2026)</strong></figcaption>
-        </figure>
+    <!-- Comparison Chart -->
+    <div class="content-card">
+      <h3>Budget Priority Comparison</h3>
+      <p>Administrative costs now dwarf direct citizen services.</p>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(23).png" alt="Internal Services vs Direct Services" />
+        <div class="chart-caption">Internal Services vs Parks, Libraries, Public Health</div>
       </div>
     </div>
 
-    <!-- Card: Austin Energy context + chart (output 22) -->
-    <div class="vintage-card" style="margin-top:20px;">
-      <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:start;">
-        <div>
-          <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Austin Energy context</h3>
-          <p style="margin:10px 0;font-size:1.1rem;">Austin Energy's budget is up <strong style="color:var(--accent)">~67%</strong> since 2015, while electricity delivered is up <strong style="color:var(--accent)">~30%</strong>.</p>
-        </div>
-        <figure style="margin:0;border:2px solid var(--text);border-radius:8px;overflow:hidden;background:var(--surface);">
-          <img src="../images/output%20(22).png" alt="Austin Energy Budget vs Electricity Delivered (2015–2025)" style="display:block;width:100%;height:auto;" />
-          <figcaption style="font-size:0.9rem;color:var(--text);padding:12px;border-top:2px solid var(--text);font-weight:600;"><strong>Austin Energy Budget vs Electricity Delivered (2015–2025)</strong></figcaption>
-        </figure>
+    <!-- Austin Energy -->
+    <div class="content-card">
+      <h3>Austin Energy Inefficiency</h3>
+      <p>Austin Energy's budget increased <strong>67%</strong> while electricity delivered grew only <strong>30%</strong>.</p>
+      <div class="badge badge-warning">Costs outpacing service</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(22).png" alt="Austin Energy Budget vs Delivery" />
+        <div class="chart-caption">Austin Energy Budget vs Electricity Delivered</div>
       </div>
     </div>
-
-    <p style="font-size:0.95rem;color:var(--muted);margin:20px 0;">Figures rounded; derived from City of Austin budget documents (2015–2026) and compiled analyses.</p>
   </section>
 
-  <div id="positions"></div>
-  <section>
-    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Perspectives</h2>
-    <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-      <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Supporters claim:</h3>
-        <div style="margin:0 0 20px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">"It just keeps up with inflation"</div>
-          <p style="margin:8px 0;font-size:1.1rem;">Even though the budget has been outpacing both inflation and population growth for years.</p>
+  <!-- Perspectives Section -->
+  <section id="perspectives" class="mt-4">
+    <h2>⚖️ The Debate: Support vs Opposition</h2>
+    <div class="perspectives-grid">
+
+      <!-- Support Arguments -->
+      <div class="perspective-card perspective-support">
+        <h3 style="color: var(--success-green);">✓ Support Arguments</h3>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Keeping up with inflation"</div>
+          <p class="text-muted">Despite budget growth far exceeding both inflation and population growth for years.</p>
         </div>
-        <div style="margin:0 0 20px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">"It funds public safety"</div>
-          <p style="margin:8px 0;font-size:1.1rem;">While police staffing and response times have lagged despite record spending.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Funding public safety"</div>
+          <p class="text-muted">While police staffing and response times lag despite record spending.</p>
         </div>
-        <div style="margin:0 0 20px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">"It avoids cuts"</div>
-          <p style="margin:8px 0;font-size:1.1rem;">Which really means no pressure to trim bloated departments or fix inefficiencies, even after approving an additional $100 million for homeless services on top of last budget's $550 million, with little visible improvement.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Avoiding service cuts"</div>
+          <p class="text-muted">Meaning no pressure to address inefficiencies or bloated departments.</p>
         </div>
       </div>
 
-      <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 20px;">Vote No — Opponents say:</h3>
-        
-        <div style="margin:0 0 24px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">Unaccountable Spending</div>
-          <p style="margin:8px 0;font-size:1.1rem;">The various NGOs — especially those in the homelessness industry — are unaccountable and now getting even more taxpayer money (+$100M on top of last year's $550M), with few results.</p>
+      <!-- Opposition Arguments -->
+      <div class="perspective-card perspective-oppose">
+        <h3 style="color: var(--danger-red);">✗ Opposition Arguments</h3>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Unaccountable Spending</div>
+          <p>NGOs receiving $650M+ for homelessness with minimal results or oversight.</p>
         </div>
-        
-        <div style="margin:0 0 24px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">Misplaced Priorities</div>
-          <p style="margin:8px 0;font-size:1.1rem;">Police and core public services should be prioritized before expanding bureaucracy and pet projects.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Misplaced Priorities</div>
+          <p>Police and core services should come before bureaucratic expansion.</p>
         </div>
-        
-        <div style="margin:0 0 24px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">Out of Touch</div>
-          <p style="margin:8px 0;font-size:1.1rem;">City Council has lost touch with residents, ignoring the realities of a rapidly deteriorating civic life.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Out of Touch</div>
+          <p>Council ignores deteriorating quality of life while raising taxes.</p>
         </div>
-        
-        <div style="margin:0 0 24px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">Unsustainable Growth</div>
-          <p style="margin:8px 0;font-size:1.1rem;">City spending is growing far faster than the city itself, with little to show in improved services.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Unsustainable Growth</div>
+          <p>Spending growing 8x faster than population with little improvement.</p>
         </div>
-        
-        <div style="margin:0 0 24px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">Bureaucratic Bloat</div>
-          <p style="margin:8px 0;font-size:1.1rem;">Bureaucratic overhead and rising debt service crowd out dollars that should be going to frontline needs.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Bureaucratic Bloat</div>
+          <p>Administrative costs crowding out frontline services.</p>
         </div>
-        
-        <div style="margin:0 0 24px;">
-          <div class="retro-badge" style="font-size:1rem;margin-bottom:12px;background:var(--accent);color:var(--cream);">Breaking Point</div>
-          <p style="margin:8px 0;font-size:1.1rem;">Higher city taxes pile onto rising housing costs, pushing both homeowners and renters closer to the breaking point.</p>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Breaking Point</div>
+          <p>Higher taxes push residents toward financial crisis.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div id="effects"></div>
-  <section>
-    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">How a TRE could affect you</h2>
-    <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-      <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Homeowners</h3>
-        <p style="margin:10px 0;font-size:1.1rem;">City tax rate × taxable value = city bill. Homestead exemptions help, but higher rates generally raise most bills.</p>
-      </div>
-      <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Renters</h3>
-        <p style="margin:10px 0;font-size:1.1rem;">Property taxes are a major landlord expense; rate increases are often passed through to rents over time.</p>
-      </div>
-      <div class="vintage-card">
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:6px 0 12px;">Small businesses</h3>
-        <p style="margin:10px 0;font-size:1.1rem;">Commercial properties don't have a homestead cap; rate changes flow directly into operating costs.</p>
-      </div>
-    </div>
-  </section>
-  <br/>
-
-  <div id="vote"></div>
-  <section class="vintage-card">
-    <h2 class="retro-title" style="font-size:2rem;margin:0 0 20px;">Election Information</h2>
-    <div style="display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
-      <div>
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Key Dates</h3>
-        <ul style="margin:0;padding:0;list-style:none;">
-          <li style="margin-bottom:12px;font-size:1.1rem;">
-            <strong>Election Day:</strong> Tuesday, November 4, 2025
-            <div style="font-size:0.9rem;color:var(--muted);margin-top:4px;">7am – 7pm</div>
-          </li>
-          <li style="margin-bottom:12px;font-size:1.1rem;">
-            <strong>Early Voting:</strong> October 20–31, 2025
-            <div style="font-size:0.9rem;color:var(--muted);margin-top:4px;">Times vary by location</div>
-          </li>
-          <li style="margin-bottom:12px;font-size:1.1rem;">
-            <strong>Last Day to Register:</strong> October 7, 2025
-          </li>
-        </ul>
+  <!-- Impact Section -->
+  <section id="impact" class="mt-4">
+    <h2>💰 How This Affects You</h2>
+    <div class="perspectives-grid">
+      <div class="content-card">
+        <h3>🏠 Homeowners</h3>
+        <p>City tax rate × taxable value = your bill. Homestead exemptions help, but higher rates mean higher bills for most.</p>
+        <div class="badge badge-warning">~$300/year increase typical</div>
       </div>
 
-      <div>
-        <h3 style="font-family:'Alfa Slab One',cursive;color:var(--accent);font-size:1.4rem;margin:0 0 16px;">Voting Resources</h3>
-        <ul style="margin:0;padding:0;list-style:none;">
-          <li style="margin-bottom:12px;font-size:1.1rem;">
-            <strong>Find Your Polling Place:</strong><br>
-            <a href="https://votetravis.com" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">VoteTravis.com</a>
-          </li>
-          <li style="margin-bottom:12px;font-size:1.1rem;">
-            <strong>Register to Vote:</strong><br>
-            <a href="https://votetexas.gov" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">VoteTexas.gov</a>
-          </li>
-          <li style="margin-bottom:12px;font-size:1.1rem;">
-            <strong>What to Bring:</strong><br>
-            <a href="https://votetexas.gov/register-to-vote/need-id.html" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">Voter ID Requirements</a>
-          </li>
-        </ul>
+      <div class="content-card">
+        <h3>🏢 Renters</h3>
+        <p>Property taxes are landlords' major expense. Rate increases typically pass through to rent over time.</p>
+        <div class="badge badge-warning">Indirect but real impact</div>
+      </div>
+
+      <div class="content-card">
+        <h3>🏪 Small Businesses</h3>
+        <p>Commercial properties lack homestead protection. Rate changes directly impact operating costs.</p>
+        <div class="badge badge-danger">Full rate exposure</div>
       </div>
     </div>
   </section>
 
-  <div id="sources"></div>
-  <section style="color:var(--muted);border-top:2px solid var(--text);padding:20px 0 60px;margin-top:40px;">
-    <h2 class="retro-title" style="font-size:2rem;margin:28px 0 20px;">Sources & Methodology</h2>
-    <ul style="margin:8px 0 8px 20px;font-size:1.1rem;">
-      <li>Primary sources: City of Austin Approved Budget Books and CAFRs, FY2015–FY2026; Austin Energy financial and operating reports.</li>
-      <li>Figures are rounded for clarity. Where departments were reorganized, series were stitched using City notes to keep apples-to-apples.</li>
-      <li>Charts reflect publicly available numbers. If you spot an error, please share a correction with a citation and page number.</li>
-    </ul>
+  <!-- Voting Information -->
+  <section id="vote" class="mt-4">
+    <h2>🗳️ How to Vote</h2>
+    <div class="content-card info-card">
+      <div class="voting-grid">
+        <div class="voting-card">
+          <div class="voting-date">Nov 4</div>
+          <div class="voting-label">Election Day</div>
+          <div class="voting-detail">Tuesday, 7am – 7pm</div>
+        </div>
+
+        <div class="voting-card">
+          <div class="voting-date">Oct 20-31</div>
+          <div class="voting-label">Early Voting</div>
+          <div class="voting-detail">Times vary by location</div>
+        </div>
+
+        <div class="voting-card">
+          <div class="voting-date">Oct 7</div>
+          <div class="voting-label">Registration Deadline</div>
+          <div class="voting-detail">Must be registered to vote</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="https://votetravis.com" target="_blank" class="btn btn-primary">Find Your Polling Place</a>
+        <a href="https://votetexas.gov" target="_blank" class="btn btn-secondary">Check Registration Status</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sources -->
+  <section id="sources" class="mt-4">
+    <h2>📚 Sources & Methodology</h2>
+    <div class="content-card">
+      <ul style="list-style-type: disc; padding-left: 2rem;">
+        <li>Primary sources: City of Austin Approved Budget Books and CAFRs, FY2015–FY2026</li>
+        <li>Austin Energy financial and operating reports</li>
+        <li>Figures rounded for clarity; departments reorganized for consistency</li>
+        <li>All data from publicly available documents</li>
+      </ul>
+    </div>
   </section>
 </main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p>Stay informed about Austin's future. Your vote matters.</p>
+    <p class="text-muted mt-2">This site provides factual information about Austin's Tax Rate Election.
+    All data sourced from official city documents.</p>
+  </div>
+</footer>
 
 <!-- Contact Form Popup -->
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup">
     <button class="close-popup" onclick="closePopup()">×</button>
     <h3>Stay Informed</h3>
-    <p style="margin:0 0 16px;font-size:1.1rem;color:var(--text);">Sign up to get updates about Austin news and local politics:</p>
-    
+    <p class="text-center mb-3">Get updates about Austin news and the tax rate election:</p>
+
     <form class="popup-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeMDnIH_PoIjau2Bm09tJezXfK_0gYNfFDGNoXam4dYI-bZ1A/formResponse"
-      method="POST" target="hidden_iframe" onsubmit="submitted=true;" style="display:flex;flex-direction:column;gap:16px;">
-      <div style="position:relative;">
-        <input type="email" name="entry.1631733175" placeholder="Your email address" required
-          style="width:100%;padding:12px;border:2px solid var(--text);border-radius:6px;font-size:1rem;background:var(--bg);color:var(--text);">
-      </div>
-      <button type="submit" class="vintage-card" 
-        style="background:var(--accent);color:var(--cream);border:none;padding:12px 24px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:all 0.2s ease;">
+      method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+      <input type="email" name="entry.1631733175" placeholder="Your email address" required>
+      <button type="submit" class="btn btn-primary" style="width: 100%;">
         Stay Informed
       </button>
     </form>
 
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-    <div id="thanks" style="display:none;margin-top:16px;padding:16px;background:var(--surface);border-radius:6px;text-align:center;color:var(--accent);font-weight:700;font-size:1.1rem;">
-      🎉 Thanks — you're on the list!
+    <div id="thanks" style="display:none; margin-top:1rem; padding:1rem; background:var(--surface); border-radius:8px; text-align:center; color:var(--success-green); font-weight:700;">
+      ✅ Thanks! You're on the list.
     </div>
-    <script>
-      let submitted = false;
-      document.getElementById('hidden_iframe').addEventListener('load', function () {
-        if (submitted) {
-          document.querySelector('.popup-form').style.display = 'none';
-          document.getElementById('thanks').style.display = 'block';
-        }
-      });
-    </script>
   </div>
 </div>
 
 <script>
+// Countdown Timer
+function updateCountdown() {
+  const electionDate = new Date('November 4, 2025 07:00:00').getTime();
+  const now = new Date().getTime();
+  const distance = electionDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+  const countdownEl = document.getElementById('countdown');
+  if (distance < 0) {
+    countdownEl.innerHTML = '🗳️ ELECTION DAY IS HERE!';
+  } else {
+    countdownEl.innerHTML = `⏰ ${days} DAYS, ${hours} HOURS UNTIL ELECTION`;
+  }
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000); // Update every minute
+
+// Scroll Progress Indicator
+window.addEventListener('scroll', () => {
+  const winScroll = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scrollIndicator').style.width = scrolled + '%';
+
+  // Add shadow to nav on scroll
+  const nav = document.getElementById('navContainer');
+  if (winScroll > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
 // Popup functionality
+let submitted = false;
+
 function showPopup() {
   document.getElementById('popupOverlay').style.display = 'block';
   document.body.style.overflow = 'hidden';
@@ -673,15 +1197,51 @@ function closePopup() {
   document.body.style.overflow = '';
 }
 
-// Show popup after 5 seconds
-setTimeout(showPopup, 5000);
+// Show popup after 7 seconds (slightly delayed for better UX)
+setTimeout(showPopup, 7000);
 
-// Close popup when clicking outside
+// Close popup when clicking overlay
 document.getElementById('popupOverlay').addEventListener('click', function(e) {
   if (e.target === this) {
     closePopup();
   }
 });
+
+// Handle form submission
+document.getElementById('hidden_iframe').addEventListener('load', function () {
+  if (submitted) {
+    document.querySelector('.popup-form').style.display = 'none';
+    document.getElementById('thanks').style.display = 'block';
+    setTimeout(closePopup, 2000);
+  }
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '0';
+      entry.target.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        entry.target.style.transition = 'all 0.6s ease';
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }, 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Observe all content cards
+document.querySelectorAll('.content-card, .perspective-card, .voting-card').forEach(el => {
+  observer.observe(el);
+});
 </script>
+
 </body>
 </html>
