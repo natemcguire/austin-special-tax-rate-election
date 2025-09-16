@@ -796,11 +796,18 @@
 <!-- Navigation -->
 <nav class="nav-container" id="navContainer">
   <div class="nav-inner" role="navigation" aria-label="Section navigation">
-    <a href="#what" class="nav-link nav-link-regular">What is a TRE?</a>
-    <a href="#key" class="nav-link nav-link-primary">Key Facts</a>
-    <a href="#perspectives" class="nav-link nav-link-regular">Perspectives</a>
-    <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
-    <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1200px;">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <a href="#what" class="nav-link nav-link-regular">What is a TRE?</a>
+        <a href="#key" class="nav-link nav-link-regular">Key Facts</a>
+        <a href="#perspectives" class="nav-link nav-link-regular">Perspectives</a>
+        <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
+        <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
+      </div>
+      <button onclick="showPopup()" class="btn btn-primary" style="margin-left: 1rem; white-space: nowrap;">
+        Join Us
+      </button>
+    </div>
   </div>
 </nav>
 
