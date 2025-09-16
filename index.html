@@ -801,6 +801,7 @@
         <a href="#what" class="nav-link nav-link-regular">What is a TRE?</a>
         <a href="#key" class="nav-link nav-link-regular">Key Facts</a>
         <a href="#perspectives" class="nav-link nav-link-regular">Perspectives</a>
+        <a href="#myths" class="nav-link nav-link-regular">Myths vs Facts</a>
         <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
         <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
       </div>
@@ -834,11 +835,6 @@
           <div class="stat-number">+$110M</div>
           <div class="stat-label">Additional Revenue</div>
           <div class="stat-detail">Annual increase</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">~$25</div>
-          <div class="stat-label">Monthly Impact</div>
-          <div class="stat-detail">Average homeowner</div>
         </div>
         <div class="stat-card">
           <div class="stat-number">Nov 4</div>
@@ -1037,6 +1033,140 @@
           <p>Higher taxes push residents toward financial crisis.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Myth vs. Fact Section -->
+  <section id="myths" class="mt-4">
+    <h2>🎭 Myth vs. Fact: Prop Q</h2>
+    <div class="content-card">
+      <style>
+        .myth-fact-table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          overflow: hidden;
+        }
+        .myth-fact-table th {
+          background: var(--dark-navy);
+          color: var(--pure-white);
+          padding: 1rem 1.5rem;
+          font-weight: 700;
+          font-size: 1.2rem;
+          text-align: left;
+        }
+        .myth-fact-table th:first-child {
+          background: var(--warning);
+          width: 35%;
+        }
+        .myth-fact-table th:last-child {
+          background: var(--success-green);
+          width: 65%;
+        }
+        .myth-fact-table tr {
+          border-bottom: 2px solid var(--border);
+        }
+        .myth-fact-table tr:hover {
+          background: var(--surface);
+        }
+        .myth-fact-table td {
+          padding: 1.25rem 1.5rem;
+          vertical-align: top;
+          line-height: 1.6;
+        }
+        .myth-fact-table td:first-child {
+          font-weight: 600;
+          color: var(--text-muted);
+          font-style: italic;
+          border-right: 2px solid var(--border);
+        }
+        .myth-fact-table td:last-child {
+          color: var(--text);
+          font-weight: 500;
+        }
+        @media (max-width: 768px) {
+          .myth-fact-table, .myth-fact-table tbody, .myth-fact-table tr {
+            display: block;
+          }
+          .myth-fact-table thead {
+            display: none;
+          }
+          .myth-fact-table tr {
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+          }
+          .myth-fact-table td {
+            display: block;
+            border-right: none !important;
+            position: relative;
+          }
+          .myth-fact-table td:first-child {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-bottom: 2px solid var(--border);
+            padding-left: 3.5rem;
+          }
+          .myth-fact-table td:first-child::before {
+            content: "🚫 MYTH:";
+            position: absolute;
+            left: 1rem;
+            top: 1.25rem;
+            font-weight: 700;
+            color: var(--warning);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+          }
+          .myth-fact-table td:last-child {
+            padding-left: 3.5rem;
+          }
+          .myth-fact-table td:last-child::before {
+            content: "✅ FACT:";
+            position: absolute;
+            left: 1rem;
+            top: 1.25rem;
+            font-weight: 700;
+            color: var(--success-green);
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+          }
+        }
+      </style>
+
+      <table class="myth-fact-table">
+        <thead>
+          <tr>
+            <th>🚫 Myth</th>
+            <th>✅ Fact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Trump slashed Austin's federal funding."</td>
+            <td>Federal money is set by Congress and formulas, not targeted at one city. If Austin lost a grant, it's on City Hall, not D.C.</td>
+          </tr>
+          <tr>
+            <td>"Abbott forced City Hall to raise taxes."</td>
+            <td>State law just says: if the city wants more than the cap, it must ask voters. That's protection, not a mandate to hike.</td>
+          </tr>
+          <tr>
+            <td>"Prop Q fixes a budget shortfall."</td>
+            <td>They never define the shortfall. Austin is pulling in record revenues — the issue is spending priorities, not missing money.</td>
+          </tr>
+          <tr>
+            <td>"Prop Q restores Trump's cuts."</td>
+            <td>There's no such thing as city-specific "Trump cuts." It's a slogan to cover bad budgeting.</td>
+          </tr>
+          <tr>
+            <td>"Prop Q guarantees funds for homelessness, safety, parks, and libraries."</td>
+            <td>The ballot language has no lockbox, no metrics, and no audits. Without accountability, it's just another blank check.</td>
+          </tr>
+          <tr>
+            <td>"Austin takes care of its own."</td>
+            <td>Exactly — and that means living within record revenues, funding essentials first, and demanding results, not excuses.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
