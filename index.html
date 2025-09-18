@@ -6,25 +6,35 @@
   <title>Austin Special Tax Rate Election (TRE)</title>
   <meta name="description" content="See recent news and data on the upcoming Austin Special Tax Rate Election (TRE). Learn about the tax increase and how to keep Austin beautiful." />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://austintaxrateelection.com/" />
+  <!-- Open Graph (good for Facebook, WhatsApp, LinkedIn, etc.) -->
   <meta property="og:title" content="Austin Tax Rate Election 2025 | Key Facts & Timeline" />
   <meta property="og:description" content="Austin's Nov 2025 Tax Rate Election proposes a 5¢ increase (+$110M revenue). Homeowner impact: ~$1000++. Early voting Oct 20-31. Get the facts." />
   <meta property="og:image" content="https://austintaxrateelection.com/images/GzhoO63WIAA9lZi.jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Austin Prop Q Tax Rate Election - Vote No" />
-  <meta property="og:site_name" content="Austin Prop Q Tax Rate Election - Vote No" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:url" content="https://austintaxrateelection.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Austin Tax Rate Election - Vote NO on Prop Q" />
   <meta property="og:locale" content="en_US" />
 
-  <!-- Twitter -->
+  <!-- X (Twitter) Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://austintaxrateelection.com/" />
   <meta name="twitter:title" content="Austin Tax Rate Election 2025 | Key Facts & Timeline" />
   <meta name="twitter:description" content="Austin's Nov 2025 Tax Rate Election proposes a 5¢ increase (+$110M revenue). Average homeowner impact: ~$25/month. Early voting Oct 20-31. Get the facts." />
   <meta name="twitter:image" content="https://austintaxrateelection.com/images/GzhoO63WIAA9lZi.jpeg" />
+  <meta name="twitter:image:src" content="https://austintaxrateelection.com/images/GzhoO63WIAA9lZi.jpeg" />
   <meta name="twitter:image:alt" content="Austin residents holding signs about the tax rate election" />
+  <meta name="twitter:image:width" content="1200" />
+  <meta name="twitter:image:height" content="630" />
+
+  <!-- Additional meta tags for better sharing -->
+  <link rel="canonical" href="https://austintaxrateelection.com/" />
+
+  <!-- WhatsApp-specific optimizations -->
+  <meta property="og:image:secure_url" content="https://austintaxrateelection.com/images/GzhoO63WIAA9lZi.jpeg" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
   <!-- Additional SEO -->
   <meta name="author" content="Austin Tax Rate Election" />
@@ -797,6 +807,11 @@
       color: var(--text);
     }
 
+    /* Desktop only elements */
+    .desktop-only {
+      display: inline-block;
+    }
+
     /* Enhanced Mobile Responsiveness */
     @media (max-width: 768px) {
       .myth-fact-item {
@@ -809,14 +824,22 @@
 
       .nav-inner > div {
         justify-content: center !important;
+        flex-direction: column;
+        gap: 1rem;
       }
 
-      .nav-inner > div > div:first-child {
-        display: none !important;
+      .nav-inner > div:first-child {
+        order: 2;
       }
 
-      .nav-inner > div > div:last-child {
+      .nav-buttons {
+        order: 1;
         margin-left: 0 !important;
+        justify-content: center;
+      }
+
+      .desktop-only {
+        display: none !important;
       }
 
       .stats-grid {
@@ -1084,11 +1107,14 @@
         <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
         <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
       </div>
-      <div style="display: flex; gap: 0.5rem; margin-left: 1rem; white-space: nowrap;">
+      <div style="display: flex; gap: 0.5rem; margin-left: 1rem; white-space: nowrap;" class="nav-buttons">
+        <a href="/vote.html" class="btn btn-secondary" title="Download yard signs and materials">
+          🪧 SIGNS
+        </a>
         <button onclick="showPopup()" class="btn btn-primary">
           Join Us
         </button>
-        <button onclick="window.print()" class="btn btn-secondary" title="Print or save as PDF">
+        <button onclick="window.print()" class="btn btn-secondary desktop-only" title="Print or save as PDF">
           📄 Print
         </button>
       </div>
