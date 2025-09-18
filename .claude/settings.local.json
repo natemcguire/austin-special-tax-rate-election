@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for i in {1..28})",
+      "Bash(do [ -f \"/Users/nate/Projects/austin-tax-rate-election/austintaxrateelection.com/sign$i.html\" ])",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(for i in {3..8})",
+      "Bash(do echo \"=== sign$i.html ===\")",
+      "Bash(grep:*)",
+      "Bash(for:*)",
+      "Bash(do if [ -f \"$f\" ])",
+      "Bash(fi)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
