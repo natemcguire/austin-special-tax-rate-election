@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letters to Austin | Austin Tax Rate Election</title>
+    <meta name="description" content="Community letters and perspectives on Austin's Tax Rate Election (Prop Q). Real voices from real Austin residents.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #212121;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1A237E 0%, #D32F2F 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: #1A237E;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            background: #E8EAF6;
+            color: #D32F2F;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .letter {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .letter-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .letter-title {
+            font-size: 2rem;
+            color: #1A237E;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .letter-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .letter-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .letter-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .letter-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .letter-content h3 {
+            color: #D32F2F;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .letter-content blockquote {
+            background: #f8f9fa;
+            border-left: 4px solid #D32F2F;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+        }
+
+        .letter-content ul,
+        .letter-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .letter-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .letter-footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .share-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .share-btn.facebook {
+            background: #4267B2;
+            color: white;
+        }
+
+        .share-btn.email {
+            background: #D32F2F;
+            color: white;
+        }
+
+        .submit-cta {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .submit-cta h2 {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        .submit-cta p {
+            color: #856404;
+            margin-bottom: 1.5rem;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            background: #ffc107;
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #ffca28;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .letter {
+                padding: 1.5rem;
+            }
+
+            .letter-title {
+                font-size: 1.5rem;
+            }
+
+            .letter-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Letters to Austin</h1>
+        <p>Community voices on the Tax Rate Election. Real perspectives from your neighbors.</p>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/">Home</a>
+            <a href="/vote.html">Campaign Materials</a>
+            <a href="/letters-to-austin.html">Letters</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Letter 1: The Manufactured Crisis -->
+        <article class="letter">
+            <div class="letter-header">
+                <h2 class="letter-title">Austin's TRE is 100% Manufactured: Follow the Money</h2>
+                <div class="letter-meta">
+                    <span>📅 September 22, 2025</span>
+                    <span>✍️ Concerned Austin Resident</span>
+                    <span>📍 District 5</span>
+                </div>
+            </div>
+
+            <div class="letter-content">
+                <p>Dear Fellow Austinites,</p>
+
+                <p>I'm writing to share some disturbing facts about the upcoming Tax Rate Election that I discussed on KLBJ today. After reviewing the city budget and recent interviews with city officials, it's become crystal clear that this "crisis" is completely manufactured.</p>
+
+                <blockquote>
+                    "If you look over this, the glaring issue is that we had funding increased on many non-essential programs, and funding decreased on some of the very programs that they're now taking to the TRE. It's 100% manufactured."
+                </blockquote>
+
+                <h3>The Numbers Don't Lie</h3>
+
+                <p>The city claims they have a $33M shortfall next year. Their solution? A Tax Rate Election that will bring in <strong>$110M in revenue</strong>. That's $77 million MORE than they claim to need!</p>
+
+                <p>But here's where it gets interesting. While they're crying poor and threatening to cut essential services, look at what they're actually doing with our money:</p>
+
+                <h3>Where Your Tax Dollars Are Really Going</h3>
+
+                <p><strong>Brand New Spending:</strong></p>
+                <ul>
+                    <li>Created the ACME office (Arts, Culture, Music, Entertainment) with a <strong>$70M budget</strong> - $24M of which is completely new spending</li>
+                    <li>Management Services budget exploding from $36M to <strong>$59M</strong> (a $23M increase!)</li>
+                    <li>Communications & Engagement getting a <strong>$9M increase</strong></li>
+                    <li>Government Relations receiving a <strong>$1M increase</strong></li>
+                    <li>Equity Office getting an <strong>$800K increase</strong></li>
+                    <li>Climate Action receiving a <strong>$500K increase</strong></li>
+                </ul>
+
+                <p><strong>Meanwhile, What Got Cut:</strong></p>
+                <ul>
+                    <li>Parks & Recreation budget slashed from $182M to <strong>$155M</strong> - a $27M decrease</li>
+                    <li>Department is 70 employees short-staffed</li>
+                    <li>64 employees transferred from Parks to the new ACME office for "museums & similar"</li>
+                </ul>
+
+                <h3>The Manufactured Crisis Playbook</h3>
+
+                <p>Do you see the pattern here? They deliberately underfunded Parks & Recreation - one of the most visible and beloved city services - while pumping millions into bureaucratic expansion. Then they come to us, the taxpayers, claiming they need more money to "save" the very services they chose to cut.</p>
+
+                <p>The TRE promises to add 45 employees to Parks & Rec. But wait - they just transferred 64 employees OUT of Parks & Rec! They created the problem, and now they want us to pay to fix it.</p>
+
+                <h3>Don't Fall for It</h3>
+
+                <p>This isn't about keeping Austin beautiful or maintaining essential services. This is about expanding bureaucracy and then holding our parks hostage to make us pay for it. They're funding <strong>$38M in public health grants</strong> while claiming they can't afford to maintain our parks without a tax increase.</p>
+
+                <p>When you vote this November, remember: they had the money. They chose to spend it on new offices, expanded management, and increased bureaucracy instead of the services we actually use and need.</p>
+
+                <p><strong>Vote NO on Prop Q. Don't reward manufactured crises with higher taxes.</strong></p>
+
+                <p>Sincerely,<br>
+                A Fed-Up Taxpayer</p>
+            </div>
+
+            <div class="letter-footer">
+                <div class="share-buttons">
+                    <a href="https://twitter.com/intent/tweet?text=Austin's%20TRE%20is%20100%25%20Manufactured%20-%20Read%20the%20facts%20about%20Prop%20Q&url=https://austintaxrateelection.com/letters-to-austin.html" class="share-btn twitter">
+                        🐦 Share on X
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://austintaxrateelection.com/letters-to-austin.html" class="share-btn facebook">
+                        📘 Share on Facebook
+                    </a>
+                    <a href="mailto:?subject=Important%20Info%20About%20Austin's%20Tax%20Rate%20Election&body=Check%20out%20this%20letter%20about%20Prop%20Q:%20https://austintaxrateelection.com/letters-to-austin.html" class="share-btn email">
+                        ✉️ Email to Friend
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Letter 2: The Homeless NGO Complex -->
+        <article class="letter">
+            <div class="letter-header">
+                <h2 class="letter-title">The Homeless NGO Complex in Austin: Where Your $88M Really Goes</h2>
+                <div class="letter-meta">
+                    <span>📅 September 22, 2025</span>
+                    <span>✍️ Austin Taxpayer Advocate</span>
+                    <span>📍 Central Austin</span>
+                </div>
+            </div>
+
+            <div class="letter-content">
+                <p><strong>To Austin Taxpayers & Residents:</strong></p>
+
+                <p>A one-page brief on the city's homelessness spending and why accountability matters.</p>
+
+                <h3>The Homeless NGO Complex in Austin</h3>
+
+                <p>Austin spends tens of millions each year on homelessness response, and most of that funding is outsourced to nonprofits through Social Services Contracts—creating a <strong>"shadow city council"</strong> of organizations that shape priorities without being elected or directly accountable to voters.</p>
+
+                <h3>Key Numbers</h3>
+
+                <ul>
+                    <li><strong>~$88M</strong> planned for Homelessness & Housing in FY 2026</li>
+                    <li><strong>$51.5M</strong> Homeless Strategies & Operations (FY 2025–26), of which <strong>~71% is Social Services Contracts</strong> (outsourced)</li>
+                    <li>Social Service Contract funding grew <strong>over 5×</strong> since 2015, while Austin's population grew ~10%</li>
+                </ul>
+
+                <h3>Who Receives City Contracts</h3>
+
+                <p>Examples from recent budgets include SAFE Alliance, Salvation Army, Casa Marianella, the 8th Street Shelter operator, Permanent Supportive Housing providers, and one-time shelter operations for the Marshalling Yard.</p>
+
+                <h3>Why Residents Are Concerned</h3>
+
+                <ul>
+                    <li><strong>Perverse incentives:</strong> worsening street conditions often lead to bigger budgets.</li>
+                    <li><strong>Accountability gap:</strong> nonprofits influence priorities but aren't accountable to voters.</li>
+                    <li><strong>Overhead first:</strong> significant dollars are absorbed by admin and executive costs before services.</li>
+                    <li><strong>Duplication:</strong> overlapping contracts across Public Health, Housing, and the Homeless Strategy Office.</li>
+                    <li><strong>Results vs. spending:</strong> record outlays alongside persistently visible encampments.</li>
+                </ul>
+
+                <blockquote>
+                    <strong>Case study:</strong> The city ended its contract with Urban Alchemy after data-handling and oversight issues—one example of why tighter vetting and performance enforcement are needed.
+                </blockquote>
+
+                <h3>Bottom Line</h3>
+
+                <p>Austin outsources roughly <strong>70–75%</strong> of its homelessness operating budget to outside providers each year. Taxpayers deserve clear metrics—units built, treatment beds opened, and people permanently housed—plus regular audits and public reporting. Fund core services, measure outcomes, and tie renewals to results.</p>
+
+                <p style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #ddd; font-size: 0.9rem; color: #666;">
+                    <em>Prepared for Austin taxpayers and residents. Data summarized from City of Austin budget books and public documents. This message is not affiliated with any PAC.</em>
+                </p>
+            </div>
+
+            <div class="letter-footer">
+                <div class="share-buttons">
+                    <a href="https://twitter.com/intent/tweet?text=The%20Homeless%20NGO%20Complex%20in%20Austin%20-%20Where%20Your%20%2488M%20Really%20Goes&url=https://austintaxrateelection.com/letters-to-austin.html" class="share-btn twitter">
+                        🐦 Share on X
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://austintaxrateelection.com/letters-to-austin.html" class="share-btn facebook">
+                        📘 Share on Facebook
+                    </a>
+                    <a href="mailto:?subject=Austin%20Homelessness%20Spending%20Facts&body=Check%20out%20this%20letter%20about%20Austin's%20homelessness%20spending:%20https://austintaxrateelection.com/letters-to-austin.html" class="share-btn email">
+                        ✉️ Email to Friend
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Submit CTA -->
+        <div class="submit-cta">
+            <h2>Share Your Voice</h2>
+            <p>Have thoughts on the Tax Rate Election? We want to hear from you.</p>
+            <a href="mailto:austintaxrateelection@gmail.com?subject=Letter%20to%20Austin%20Submission" class="submit-btn">
+                Submit Your Letter
+            </a>
+        </div>
+    </div>
+</body>
+</html>
