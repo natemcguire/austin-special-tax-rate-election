@@ -1,0 +1,31 @@
+# Email Campaign System - Contains sensitive API keys
+email-config.php
+send-emails.php
+email-processor.php
+email-campaign.log
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Uploads directory and CSV files
+uploads/
+*.csv

@@ -808,6 +808,92 @@
       color: var(--text);
     }
 
+    /* Updates Section Styles */
+    .update-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .update-date {
+      color: #666;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .tax-comparison {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .tax-rate-box {
+      background: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      min-width: 180px;
+      transition: all 0.3s ease;
+    }
+
+    .tax-rate-box.highlight {
+      border-color: var(--danger-red);
+      background: #fff5f5;
+    }
+
+    .tax-rate-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .rate-display {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--danger-red);
+      margin: 0.5rem 0;
+    }
+
+    .tax-rate-box small {
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: var(--danger-red);
+      font-weight: bold;
+    }
+
+    .impact-breakdown {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .impact-breakdown h4 {
+      margin: 0 0 1rem 0;
+      color: var(--text);
+    }
+
+    .impact-breakdown ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .impact-breakdown li {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
     /* Desktop only elements */
     .desktop-only {
       display: inline-block;
@@ -821,6 +907,29 @@
 
       .myth-section, .fact-section {
         padding: 1.25rem;
+      }
+
+      /* Updates section mobile styles */
+      .update-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .tax-comparison {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+      }
+
+      .tax-rate-box {
+        min-width: auto;
+        width: 100%;
+        max-width: 280px;
       }
 
       .nav-inner > div {
@@ -1107,6 +1216,7 @@
         <a href="#myths" class="nav-link nav-link-regular">Myths vs Facts</a>
         <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
         <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
+        <a href="/letters-to-austin.html" class="nav-link nav-link-regular">Letters from Austinites</a>
       </div>
       <div style="display: flex; gap: 0.5rem; margin-left: 1rem; white-space: nowrap;" class="nav-buttons">
         <a href="/vote.html" class="btn btn-secondary" title="Download yard signs and materials">
@@ -1200,6 +1310,55 @@
           This affects only the <strong>city portion</strong> of your property tax (separate from county, school, and special districts)
         </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Updates Section -->
+  <section id="updates" class="mt-4">
+    <h2>📢 Latest Updates</h2>
+
+    <!-- Update about actual tax increase -->
+    <div class="content-card warning-card">
+      <div class="update-header">
+        <span class="badge badge-warning">Important Update</span>
+        <span class="update-date">September 22, 2025</span>
+      </div>
+      <h3>The Real Tax Impact: Almost $0.10 per $100</h3>
+      <p>One thing we should highlight is that the City has <strong>baked in the 3.5% increase</strong>. That basically adds a penny or two to the 5 cents the TRE raises.</p>
+
+      <div class="tax-comparison">
+        <div class="tax-rate-box">
+          <h4>Last Year's Tax Rate</h4>
+          <div class="rate-display">$0.4776</div>
+          <small>per $100 valuation</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="tax-rate-box highlight">
+          <h4>2025 with Successful TRE</h4>
+          <div class="rate-display">$0.574017</div>
+          <small>per $100 valuation</small>
+        </div>
+      </div>
+
+      <p><strong>Unless your valuation went down, the increase is just shy of $0.10 or $500 on a $500,000 home.</strong></p>
+
+      <div class="impact-breakdown">
+        <h4>Real Impact Examples:</h4>
+        <ul>
+          <li><strong>$300k home:</strong> ~$300 annual increase</li>
+          <li><strong>$500k home:</strong> ~$500 annual increase</li>
+          <li><strong>$750k home:</strong> ~$750 annual increase</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Placeholder for future updates -->
+    <div class="content-card info-card">
+      <h3>Stay Informed</h3>
+      <p>We'll continue to update this section with the latest developments about Prop Q and the Tax Rate Election. Check back regularly for new information.</p>
+      <p><strong>Have questions or want to share information?</strong> Contact us at <a href="mailto:austintaxrateelection@gmail.com">austintaxrateelection@gmail.com</a></p>
     </div>
   </section>
 
