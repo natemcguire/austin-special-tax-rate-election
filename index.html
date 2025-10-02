@@ -1926,6 +1926,7 @@ const EMAILJS_CONFIG = {
   serviceID: 'service_pnx8jhc',
   welcomeTemplateID: 'template_e3bgmfs',
   followUpTemplateID: 'template_7kkbpxj',
+  thirdTemplateID: 'template_a6t8l9t',
   publicKey: 'iKjH4syWMdLgUSMzJ'
 };
 
@@ -1947,7 +1948,7 @@ async function sendWelcomeEmails(userEmail, userName = '') {
 
   try {
     // Send first welcome email
-    console.log('Sending welcome email 1 of 2...');
+    console.log('Sending welcome email 1 of 3...');
     const response1 = await emailjs.send(
       EMAILJS_CONFIG.serviceID,
       EMAILJS_CONFIG.welcomeTemplateID,
@@ -1959,7 +1960,7 @@ async function sendWelcomeEmails(userEmail, userName = '') {
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     // Send second follow-up email with the second template
-    console.log('Sending welcome email 2 of 2...');
+    console.log('Sending welcome email 2 of 3...');
     const response2 = await emailjs.send(
       EMAILJS_CONFIG.serviceID,
       EMAILJS_CONFIG.followUpTemplateID,
@@ -1967,7 +1968,19 @@ async function sendWelcomeEmails(userEmail, userName = '') {
     );
     console.log('✅ Welcome email 2 sent successfully!', response2);
 
-    return { success: true, responses: [response1, response2] };
+    // Add a 2-second delay to avoid rate limiting
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    // Send third email with the third template
+    console.log('Sending welcome email 3 of 3...');
+    const response3 = await emailjs.send(
+      EMAILJS_CONFIG.serviceID,
+      EMAILJS_CONFIG.thirdTemplateID,
+      templateParams
+    );
+    console.log('✅ Welcome email 3 sent successfully!', response3);
+
+    return { success: true, responses: [response1, response2, response3] };
   } catch (error) {
     console.error('❌ Failed to send welcome emails:', error);
     // Still return partial success if first email went through

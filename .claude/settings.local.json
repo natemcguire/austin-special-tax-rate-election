@@ -10,7 +10,8 @@
       "Bash(grep:*)",
       "Bash(for:*)",
       "Bash(do if [ -f \"$f\" ])",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(php:*)"
     ],
     "deny": [],
     "ask": []
