@@ -11,7 +11,10 @@
       "Bash(for:*)",
       "Bash(do if [ -f \"$f\" ])",
       "Bash(fi)",
-      "Bash(php:*)"
+      "Bash(php:*)",
+      "Bash(do)",
+      "Bash(if ! grep -q \"This website is a personal project from a concerned resident of Austin\" \"$file\")",
+      "Bash(then)"
     ],
     "deny": [],
     "ask": []
