@@ -160,6 +160,44 @@
       color: var(--accent);
     }
 
+    /* Early Voting Announcement Bar */
+    .announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 101;
+      background: linear-gradient(135deg, var(--danger-red) 0%, var(--accent-hover) 100%);
+      color: var(--pure-white);
+      padding: 1rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      animation: slideDown 0.5s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .announcement-bar strong {
+      color: var(--warning-yellow);
+      font-weight: 900;
+    }
+
+    @media (max-width: 768px) {
+      .announcement-bar {
+        font-size: 0.95rem;
+        padding: 0.75rem 0.5rem;
+      }
+    }
+
     /* Interactive Navigation */
     .nav-container {
       position: sticky;
@@ -1204,6 +1242,11 @@
 
 <!-- Scroll Progress Indicator -->
 <div class="scroll-indicator" id="scrollIndicator"></div>
+
+<!-- Early Voting Announcement Bar -->
+<div class="announcement-bar">
+  🗳️ <strong>EARLY VOTING:</strong> October 20-31, 2025 • 7 AM - 7 PM Daily • <strong>Vote NO on Prop Q</strong>
+</div>
 
 <!-- Navigation -->
 <nav class="nav-container" id="navContainer">
