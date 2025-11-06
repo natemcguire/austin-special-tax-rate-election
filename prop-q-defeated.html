@@ -1,0 +1,1769 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prop Q Campaign Archive - Austin Tax Rate Election</title>
+  <meta name="description" content="Archive of the successful campaign against Prop Q in Austin's November 2025 Tax Rate Election." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Prop Q Defeated - Austin Tax Rate Election Archive" />
+  <meta property="og:description" content="63.48% of Austin voters rejected Prop Q. View the campaign archive and learn what's next." />
+  <meta property="og:url" content="https://austintaxrateelection.com/prop-q-defeated.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="canonical" href="https://austintaxrateelection.com/prop-q-defeated.html" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D19QV3FBGY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D19QV3FBGY');
+  </script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Modern Fonts with Better Hierarchy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    :root {
+      /* Enhanced color palette for urgency and readability */
+      --danger-red: #D32F2F;
+      --alert-orange: #F57C00;
+      --warning-yellow: #FFA726;
+      --dark-navy: #1A237E;
+      --light-blue: #E3F2FD;
+      --pure-white: #FFFFFF;
+      --off-white: #F5F5F5;
+      --dark-gray: #212121;
+      --medium-gray: #616161;
+      --light-gray: #E0E0E0;
+      --success-green: #2E7D32;
+
+      /* Functional assignments */
+      --bg: var(--pure-white);
+      --text: var(--dark-gray);
+      --text-muted: var(--medium-gray);
+      --accent: var(--danger-red);
+      --accent-hover: #B71C1C;
+      --warning: var(--alert-orange);
+      --info: var(--dark-navy);
+      --surface: var(--off-white);
+      --border: var(--light-gray);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      font-weight: 400;
+    }
+
+    /* Typography Hierarchy */
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--dark-navy);
+      margin: 3rem 0 1.5rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 100%;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+      margin: 1.5rem 0 1rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      color: var(--text);
+    }
+
+    strong {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    /* Archive Notice Banner */
+    .archive-notice {
+      background: linear-gradient(135deg, var(--success-green) 0%, #1B5E20 100%);
+      color: var(--pure-white);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .archive-notice a {
+      color: var(--warning-yellow);
+      text-decoration: underline;
+      font-weight: 900;
+    }
+
+    /* Interactive Navigation */
+    .nav-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--pure-white);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .nav-container.scrolled {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--accent);
+      transition: left 0.3s ease;
+      z-index: -1;
+    }
+
+    .nav-link:hover::before {
+      left: 0;
+    }
+
+    .nav-link-regular {
+      color: var(--text);
+      background: var(--surface);
+      border-color: var(--border);
+    }
+
+    .nav-link-regular:hover {
+      color: var(--pure-white);
+      border-color: var(--accent);
+    }
+
+    .nav-link-primary {
+      color: var(--pure-white);
+      background: var(--accent);
+      font-weight: 700;
+      animation: pulse-attention 2s infinite;
+    }
+
+    .nav-link-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    }
+
+    @keyframes pulse-attention {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 10px rgba(211, 47, 47, 0);
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--light-blue) 0%, var(--pure-white) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(211, 47, 47, 0.05) 0%, transparent 70%);
+      animation: rotate 30s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .countdown-timer {
+      display: inline-block;
+      background: var(--danger-red);
+      color: var(--pure-white);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 2rem 0;
+      box-shadow: 0 4px 16px rgba(211, 47, 47, 0.3);
+      animation: bounce 2s ease infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: var(--text);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Quick Stats Cards */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--warning));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      border-color: var(--accent);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .stat-detail {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-top: 0.5rem;
+    }
+
+    /* Content Cards */
+    .content-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--accent);
+    }
+
+    .content-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .alert-card {
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+      border-left: 4px solid var(--warning);
+      position: relative;
+    }
+
+    .alert-card::before {
+      content: '⚠️';
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 2rem;
+      opacity: 0.5;
+    }
+
+    .danger-card {
+      background: linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%);
+      border-left: 4px solid var(--danger-red);
+    }
+
+    .info-card {
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+      border-left: 4px solid var(--info);
+    }
+
+    /* Interactive Badges */
+    .badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .badge-danger {
+      background: var(--danger-red);
+      color: var(--pure-white);
+    }
+
+    .badge-danger:hover {
+      background: var(--accent-hover);
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    }
+
+    .badge-warning {
+      background: var(--warning);
+      color: var(--pure-white);
+    }
+
+    .badge-warning:hover {
+      background: #EF6C00;
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(245, 124, 0, 0.3);
+    }
+
+    .badge-info {
+      background: var(--info);
+      color: var(--pure-white);
+    }
+
+    /* Charts and Images */
+    .chart-container {
+      margin: 2rem 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .chart-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+
+    .chart-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .chart-caption {
+      background: var(--dark-navy);
+      color: var(--pure-white);
+      padding: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Perspectives Section */
+    .perspectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .perspective-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .perspective-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.02) 100%);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .perspective-card:hover::before {
+      opacity: 1;
+    }
+
+    .perspective-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .perspective-support {
+      border-top: 4px solid var(--success-green);
+    }
+
+    .perspective-oppose {
+      border-top: 4px solid var(--danger-red);
+    }
+
+    .perspective-item {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .perspective-item::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Interactive Buttons */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--pure-white);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(211, 47, 47, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--info);
+      color: var(--pure-white);
+    }
+
+    .btn-secondary:hover {
+      background: #1565C0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(26, 35, 126, 0.3);
+    }
+
+    /* Voting Info Section */
+    .voting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .voting-card {
+      background: linear-gradient(135deg, var(--light-blue) 0%, var(--pure-white) 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .voting-card:hover {
+      border-color: var(--info);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .voting-date {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--info);
+      margin-bottom: 0.5rem;
+    }
+
+    .voting-label {
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .voting-detail {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Contact Form Popup */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--pure-white);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+      max-width: 450px;
+      width: 90%;
+      animation: slideUp 0.3s ease;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+      }
+      to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+    }
+
+    .popup h3 {
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .popup-form input[type="email"],
+    .popup-form input[type="tel"] {
+      padding: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .popup-form input[type="email"]:focus,
+    .popup-form input[type="tel"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .close-popup:hover {
+      background: var(--surface);
+      color: var(--accent);
+      transform: rotate(90deg);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .nav-inner {
+        padding: 0.75rem;
+      }
+
+      .nav-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .content-card {
+        padding: 1.5rem;
+      }
+
+      .perspectives-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Myth vs Fact Cards */
+    .myth-fact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .myth-fact-item {
+      background: var(--pure-white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 2px solid var(--border);
+    }
+
+    .myth-fact-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .myth-section {
+      background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+      padding: 1.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .fact-section {
+      background: linear-gradient(135deg, #E8F5E8 0%, #C8E6C9 100%);
+      padding: 1.5rem;
+    }
+
+    .myth-label, .fact-label {
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .myth-label {
+      color: var(--warning);
+    }
+
+    .fact-label {
+      color: var(--success-green);
+    }
+
+    .myth-section p, .fact-section p {
+      margin: 0;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .myth-section p {
+      color: var(--text);
+      font-style: italic;
+    }
+
+    .fact-section p {
+      color: var(--text);
+    }
+
+    /* Updates Section Styles */
+    .update-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .update-date {
+      color: #666;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .tax-comparison {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .tax-rate-box {
+      background: white;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      min-width: 180px;
+      transition: all 0.3s ease;
+    }
+
+    .tax-rate-box.highlight {
+      border-color: var(--danger-red);
+      background: #fff5f5;
+    }
+
+    .tax-rate-box h4 {
+      margin: 0 0 0.5rem 0;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .rate-display {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--danger-red);
+      margin: 0.5rem 0;
+    }
+
+    .tax-rate-box small {
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: var(--danger-red);
+      font-weight: bold;
+    }
+
+    .impact-breakdown {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .impact-breakdown h4 {
+      margin: 0 0 1rem 0;
+      color: var(--text);
+    }
+
+    .impact-breakdown ul {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+
+    .impact-breakdown li {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    /* Desktop only elements */
+    .desktop-only {
+      display: inline-block;
+    }
+
+    /* Enhanced Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .myth-fact-item {
+        margin: 0 -0.5rem;
+      }
+
+      .myth-section, .fact-section {
+        padding: 1.25rem;
+      }
+
+      /* Updates section mobile styles */
+      .update-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .tax-comparison {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .arrow {
+        transform: rotate(90deg);
+        font-size: 1.5rem;
+      }
+
+      .tax-rate-box {
+        min-width: auto;
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .nav-inner > div {
+        justify-content: center !important;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-inner > div:first-child {
+        order: 2;
+      }
+
+      .nav-buttons {
+        order: 1;
+        margin-left: 0 !important;
+        justify-content: center;
+      }
+
+      .desktop-only {
+        display: none !important;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .perspectives-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .voting-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      /* Reset colors for print */
+      * {
+        color: #000 !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+      }
+
+      /* Show print header */
+      .print-header {
+        display: block !important;
+        border-bottom: 2px solid #000;
+        margin-bottom: 12pt;
+        padding-bottom: 8pt;
+      }
+
+      /* Hide interactive elements */
+      .nav-container,
+      .popup-overlay,
+      .btn,
+      .countdown-timer,
+      .close-popup,
+      .scroll-indicator {
+        display: none !important;
+      }
+
+      /* Page layout */
+      body {
+        font-size: 11pt;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Typography for print */
+      h1 {
+        font-size: 24pt;
+        text-align: center;
+        margin-bottom: 12pt;
+        page-break-after: avoid;
+      }
+
+      h2 {
+        font-size: 16pt;
+        margin: 18pt 0 8pt 0;
+        page-break-after: avoid;
+      }
+
+      h2::before {
+        display: none;
+      }
+
+      h3 {
+        font-size: 13pt;
+        margin: 12pt 0 6pt 0;
+        page-break-after: avoid;
+      }
+
+      p {
+        margin: 6pt 0;
+        orphans: 3;
+        widows: 3;
+      }
+
+      /* Cards become simple sections */
+      .content-card,
+      .perspective-card,
+      .stat-card,
+      .voting-card,
+      .myth-fact-item {
+        border: 1px solid #ccc;
+        margin: 8pt 0;
+        padding: 8pt;
+        page-break-inside: avoid;
+        background: #fff !important;
+      }
+
+      .hero {
+        background: #fff !important;
+        padding: 12pt 0;
+      }
+
+      /* Myth/Fact sections */
+      .myth-section {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 6pt;
+        padding-bottom: 6pt;
+      }
+
+      .fact-section {
+        padding-top: 6pt;
+      }
+
+      /* Badges become simple text */
+      .badge {
+        border: 1px solid #000;
+        padding: 2pt 4pt;
+        margin: 2pt;
+        display: inline-block;
+        font-size: 9pt;
+      }
+
+      /* Charts and images */
+      .chart-container img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .chart-caption {
+        text-align: center;
+        font-weight: bold;
+        margin: 4pt 0;
+      }
+
+      /* Stats grid for print */
+      .stats-grid {
+        display: block;
+      }
+
+      .stat-card {
+        display: inline-block;
+        width: 30%;
+        margin: 4pt 1%;
+        vertical-align: top;
+      }
+
+      /* Voting info */
+      .voting-grid {
+        display: block;
+      }
+
+      .voting-card {
+        display: inline-block;
+        width: 30%;
+        margin: 4pt 1%;
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background: #fff !important;
+        color: #000 !important;
+        border-top: 2px solid #000;
+        margin-top: 12pt;
+        padding: 8pt 0;
+      }
+
+      /* Page breaks */
+      .hero,
+      section {
+        page-break-inside: avoid;
+      }
+
+      /* URLs for print */
+      a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+      }
+
+      a[href^="#"]:after {
+        content: "";
+      }
+    }
+
+    /* Utility Classes */
+    .text-center { text-align: center; }
+    .text-muted { color: var(--text-muted); }
+    .mt-1 { margin-top: 0.5rem; }
+    .mt-2 { margin-top: 1rem; }
+    .mt-3 { margin-top: 1.5rem; }
+    .mt-4 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 0.5rem; }
+    .mb-2 { margin-bottom: 1rem; }
+    .mb-3 { margin-bottom: 1.5rem; }
+    .mb-4 { margin-bottom: 2rem; }
+
+    /* Smooth scroll indicator */
+    .scroll-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--warning));
+      z-index: 101;
+      transition: width 0.3s ease;
+    }
+
+    /* Main container */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-gray);
+      color: var(--pure-white);
+      padding: 3rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Loading animation for interactive elements */
+    @keyframes shimmer {
+      0% { background-position: -1000px 0; }
+      100% { background-position: 1000px 0; }
+    }
+
+    .loading {
+      background: linear-gradient(90deg,
+        var(--surface) 25%,
+        var(--light-gray) 50%,
+        var(--surface) 75%);
+      background-size: 1000px 100%;
+      animation: shimmer 2s infinite;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Scroll Progress Indicator -->
+<div class="scroll-indicator" id="scrollIndicator"></div>
+
+<!-- Archive Notice Banner -->
+<div class="archive-notice">
+  📚 CAMPAIGN ARCHIVE - Prop Q was defeated on November 5, 2025 • <a href="/">See what's next →</a>
+</div>
+
+<!-- Navigation -->
+<nav class="nav-container" id="navContainer">
+  <div class="nav-inner" role="navigation" aria-label="Section navigation">
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 1200px;">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <a href="#what" class="nav-link nav-link-regular">What is a TRE?</a>
+        <a href="#key" class="nav-link nav-link-regular">Key Facts</a>
+        <a href="#perspectives" class="nav-link nav-link-regular">Perspectives</a>
+        <a href="#myths" class="nav-link nav-link-regular">Myths vs Facts</a>
+        <a href="#impact" class="nav-link nav-link-regular">Your Impact</a>
+        <a href="#vote" class="nav-link nav-link-regular">Vote Info</a>
+        <a href="/letters-to-austin.html" class="nav-link nav-link-regular">Letters from Austinites</a>
+      </div>
+      <div style="display: flex; gap: 0.5rem; margin-left: 1rem; white-space: nowrap;" class="nav-buttons">
+        <a href="/" class="btn btn-primary">
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Austin Tax Rate Election</h1>
+      <div class="countdown-timer">Campaign Archive</div>
+      <p class="hero-subtitle">
+        Austin City Council called a <strong>special Tax Rate Election (TRE)</strong> for November 2025.
+        This critical vote determined whether property taxes would increase by 5¢ per $100 valuation,
+        generating an additional $110M in revenue. This page archives the campaign materials and information.
+      </p>
+
+      <!-- Print-only header -->
+      <div style="display: none;" class="print-header">
+        <h2 style="text-align: center; margin: 0;">Austin Tax Rate Election - November 4, 2025</h2>
+        <p style="text-align: center; margin: 8pt 0; font-style: italic;">
+          Proposition Q: Vote on 5¢ property tax increase ($0.574017 total rate)
+        </p>
+        <p style="text-align: center; margin: 4pt 0; font-size: 10pt;">
+          Source: austintaxrateelection.com • Printed on <span id="print-date"></span>
+        </p>
+      </div>
+
+      <!-- Quick Stats Dashboard -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">57.4¢</div>
+          <div class="stat-label">Proposed City Tax Rate</div>
+          <div class="stat-detail">vs 47.76¢ last year</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">+$482</div>
+          <div class="stat-label">Annual Increase</div>
+          <div class="stat-detail">Per $500k home value</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Nov 4</div>
+          <div class="stat-label">Election Day</div>
+          <div class="stat-detail">Early voting Oct 20-31</div>
+        </div>
+      </div>
+
+      <!-- Latest Updates Alert -->
+      <div class="content-card alert-card">
+        <h3>📢 Total Tax Burden Update</h3>
+        <p><strong>It's not just the City!</strong> Travis County increased property taxes from $0.344445 to $0.372 (8% increase, $0.0275556). Central Health went from $0.107969 to $0.118023 (about 1 cent). Last year saw massive increases: AISD ($0.091) and Travis County "day care" TRE ($0.025). The City's new rate would be <strong>$0.574017</strong> — an increase of <strong>$0.096417</strong> over last year's $0.4776. That's <strong>$96.42 per $100k valuation</strong> or <strong>$482 on a $500k home</strong>.</p>
+        <div class="mt-2">
+          <span class="badge badge-danger">Multiple Tax Increases</span>
+          <span class="badge badge-warning">Compounding Effect</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is a TRE Section -->
+  <section id="what" class="mt-4">
+    <h2>🏛️ Understanding Tax Rate Elections - What is it?</h2>
+    <div class="content-card info-card">
+      <h3>What You Need to Know</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">✓</span>
+          A <strong>Tax Rate Election (TRE)</strong> asks voters to approve a property tax rate above the state's voter-approval cap
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">✓</span>
+          If <strong>approved</strong>: The higher rate applies immediately and becomes the new baseline for future years
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">✓</span>
+          If <strong>rejected</strong>: The rate defaults to the voter-approval rate, requiring budget adjustments
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">ℹ️</span>
+          This affects only the <strong>city portion</strong> of your property tax (separate from county, school, and special districts)
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Updates Section -->
+  <section id="updates" class="mt-4">
+    <h2>📢 Latest Updates</h2>
+
+    <!-- Update about actual tax increase -->
+    <div class="content-card warning-card">
+      <div class="update-header">
+        <span class="badge badge-warning">Important Update</span>
+        <span class="update-date">September 22, 2025</span>
+      </div>
+      <h3>The Real Tax Impact: Almost $0.10 per $100</h3>
+      <p>One thing we should highlight is that the City has <strong>baked in the 3.5% increase</strong>. That basically adds a penny or two to the 5 cents the TRE raises.</p>
+
+      <div class="tax-comparison">
+        <div class="tax-rate-box">
+          <h4>Last Year's Tax Rate</h4>
+          <div class="rate-display">$0.4776</div>
+          <small>per $100 valuation</small>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="tax-rate-box highlight">
+          <h4>2025 with Successful TRE</h4>
+          <div class="rate-display">$0.574017</div>
+          <small>per $100 valuation</small>
+        </div>
+      </div>
+
+      <p><strong>Unless your valuation went down, the increase is just shy of $0.10 or $500 on a $500,000 home.</strong></p>
+
+      <div class="impact-breakdown">
+        <h4>Real Impact Examples:</h4>
+        <ul>
+          <li><strong>$300k home:</strong> ~$300 annual increase</li>
+          <li><strong>$500k home:</strong> ~$500 annual increase</li>
+          <li><strong>$750k home:</strong> ~$750 annual increase</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Placeholder for future updates -->
+    <div class="content-card info-card">
+      <h3>Stay Informed</h3>
+      <p>We'll continue to update this section with the latest developments about Prop Q and the Tax Rate Election. Check back regularly for new information.</p>
+      <p><strong>Have questions or want to share information?</strong> Contact us at <a href="mailto:austintaxrateelection@gmail.com">austintaxrateelection@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Key Facts Section -->
+  <section id="key" class="mt-4">
+    <h2>📊 Budget Facts</h2>
+
+    <!-- Budget Reality Check -->
+    <div class="content-card danger-card mb-3">
+      <h3>⚠️ The "Shortfall" Myth</h3>
+      <p>The alleged budget "shortfall" justifying the TRE could be resolved by just <strong>0.5% of the $6.3 billion budget</strong>. This year's budget increased by <strong>$400 million</strong> from last year's $5.9B — that's <strong>14 times the "deficit"</strong>. Meanwhile, population growth has stalled and inflation is under 3%. The TRE creates an undefined slush fund for pet projects and friends of City Hall, not essential services.</p>
+      <div class="badge badge-danger">$400M budget increase</div>
+      <div class="badge badge-warning">14x the alleged deficit</div>
+      <div class="badge badge-info">Population growth stalled</div>
+    </div>
+
+    <!-- Alert Stats -->
+    <div class="content-card danger-card mb-3">
+      <div class="stats-grid">
+        <div class="text-center">
+          <div class="stat-number" style="color: var(--danger-red);">80%</div>
+          <div class="stat-label">Budget Growth</div>
+          <div class="stat-detail">vs 10% Population Growth</div>
+        </div>
+        <div class="text-center">
+          <div class="stat-number" style="color: var(--danger-red);">$2,500</div>
+          <div class="stat-label">More Per Resident</div>
+          <div class="stat-detail">Spending increase</div>
+        </div>
+        <div class="text-center">
+          <div class="stat-number" style="color: var(--danger-red);">$500M+</div>
+          <div class="stat-label">Internal Services</div>
+          <div class="stat-detail">Administrative costs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget Growth Analysis -->
+    <div class="content-card">
+      <h3>Budget Growth vs. Population</h3>
+      <p>City budget exploded from <strong>$3.5B (2015)</strong> to <strong>$6.3B (2025)</strong> while population grew only <strong>~10%</strong>. This is crazy!</p>
+      <div class="badge badge-danger">80% budget increase</div>
+      <div class="badge badge-warning">25-30% real growth after inflation</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(11).png" alt="Austin Budget vs Population Growth (2015–2025)" />
+        <div class="chart-caption">Austin Budget vs Population Growth (2015–2025)</div>
+      </div>
+    </div>
+
+    <!-- Per-Resident Spending -->
+    <div class="content-card">
+      <h3>Per-Resident Spending Surge</h3>
+      <p>Spending per resident jumped from <strong>$3,800 (2015)</strong> to <strong>$6,300 (2025)</strong>.</p>
+      <div class="badge badge-danger">$2,500 more per person</div>
+      <div class="badge badge-warning">25% increase after inflation</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(12).png" alt="Per-Resident Spending Over Time" />
+        <div class="chart-caption">Per-Resident Spending Growth</div>
+      </div>
+    </div>
+
+    <!-- Debt Service -->
+    <div class="content-card">
+      <h3>Our Debt is Growing</h3>
+      <p>General debt service nearly <strong>doubled</strong> from <strong>$149M</strong> to <strong>$288M</strong> yearly.</p>
+      <div class="badge badge-danger">1 in 5 dollars goes to debt</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(4).png" alt="Debt Service vs General Fund Revenue" />
+        <div class="chart-caption">Debt Service vs General Fund Revenue</div>
+      </div>
+    </div>
+
+    <!-- Internal Services -->
+    <div class="content-card">
+      <h3>Administrative Hiring is Out of Control</h3>
+      <p>"Internal Services & Transfers" - the people working in the offices of the various city departments - primarily burecrats - exceeds <strong>$500M annually</strong> — more than Parks, Libraries, and Public Health combined.</p>
+      <div class="badge badge-danger">Bureaucracy over services</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(5).png" alt="FTE Growth by Department" />
+        <div class="chart-caption">Staff Growth by Department</div>
+      </div>
+    </div>
+
+    <!-- Comparison Chart -->
+    <div class="content-card">
+      <h3>Budget Priority Comparison</h3>
+      <p>Administrative costs now dwarf direct citizen services. We are paying salaries for people to coordinate, not actually provide direct city services, like Police, Fire, and Sanitation.</p>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(23).png" alt="Internal Services vs Direct Services" />
+        <div class="chart-caption">Internal Services vs Parks, Libraries, Public Health</div>
+      </div>
+    </div>
+
+    <!-- Austin Energy -->
+    <div class="content-card">
+      <h3>Austin Energy Inefficiency</h3>
+      <p>Not only is the budget out of control, Austin Energy's budget increased <strong>67%</strong> while electricity delivered grew only <strong>30%</strong>.</p>
+      <div class="badge badge-warning">Costs outpacing service</div>
+      <div class="chart-container mt-3">
+        <img src="../images/output%20(22).png" alt="Austin Energy Budget vs Delivery" />
+        <div class="chart-caption">Austin Energy Budget vs Electricity Delivered</div>
+      </div>
+    </div>
+
+    <!-- Project Connect Crisis -->
+    <div class="content-card danger-card">
+      <h3>🚇 Project Connect: A Financial Disaster</h3>
+      <p>Project Connect (ProCON) is collapsing under its own weight:</p>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">💸</span>
+          Cost ballooned from <strong>$5.1B to over $7B</strong> in just one year
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">⚠️</span>
+          FTA federal funding is <strong>unlikely</strong> and faces legal challenges
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">🚫</span>
+          <strong>$200M/year operating costs</strong> remain completely unfunded
+        </li>
+        <li style="margin: 1rem 0; padding-left: 2rem; position: relative;">
+          <span style="position: absolute; left: 0; top: 0.2rem; font-size: 1.2rem;">💰</span>
+          Austin already transfers <strong>over $180M/year</strong> to this boondoggle
+        </li>
+      </ul>
+      <p><strong>Austin does not have the financial capacity to fund Project Connect.</strong> It's only a matter of time before it collapses, yet the City wants more tax money.</p>
+      <div class="badge badge-danger">37% cost overrun</div>
+      <div class="badge badge-warning">No operating funds</div>
+      <div class="badge badge-info">Legal challenges pending</div>
+    </div>
+  </section>
+
+  <!-- Perspectives Section -->
+  <section id="perspectives" class="mt-4">
+    <h2>⚖️ Prop Q: Vote No</h2>
+    <div class="perspectives-grid">
+
+      <!-- Support Arguments -->
+      <div class="perspective-card perspective-support">
+        <h3 style="color: var(--danger-red);">✓ Love Austin Campaign (Yes)</h3>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Abbot and Trump take care of their own"</div>
+          <p class="text-muted">What does this even mean? That we don't have to be responsible for our city budget because we dislike Abbot/Trump policies? This is a child's argument.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Funding public safety"</div>
+          <p class="text-muted">While police staffing and response times lag despite record spending.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Essential services need funding"</div>
+          <p class="text-muted">False canard — there's plenty of money and a duty to fund parks, emergency services, and homeless programs. The City just prioritizes bureaucracy over services.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-info">"Avoiding service cuts"</div>
+          <p class="text-muted">Meaning no pressure to address inefficiencies or bloated departments.</p>
+        </div>
+      </div>
+
+      <!-- Opposition Arguments -->
+      <div class="perspective-card perspective-oppose">
+        <h3 style="color: var(--success-green);">✗ Vote No on Prop Q</h3>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Unaccountable Spending</div>
+          <p>NGOs receiving $650M+ for homelessness with minimal results or oversight.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Misplaced Priorities</div>
+          <p>Police and core services should come before bureaucratic expansion.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Out of Touch</div>
+          <p>Council ignores deteriorating quality of life while raising taxes.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Unsustainable Growth</div>
+          <p>Spending growing 8x faster than population with little improvement.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Bureaucratic Bloat</div>
+          <p>Administrative costs crowding out frontline services.</p>
+        </div>
+
+        <div class="perspective-item">
+          <div class="badge badge-danger">Breaking Point</div>
+          <p>Higher taxes push residents toward financial crisis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Myth vs. Fact Section -->
+  <section id="myths" class="mt-4">
+    <h2>🎭 Myth vs. Fact: Prop Q</h2>
+
+    <div class="myth-fact-grid">
+      <div class="myth-fact-item">
+        <div class="myth-section">
+          <div class="myth-label">🚫 MYTH</div>
+          <p>"Trump slashed Austin's federal funding."</p>
+        </div>
+        <div class="fact-section">
+          <div class="fact-label">✅ FACT</div>
+          <p>Federal money is set by Congress and formulas, not targeted at one city. If Austin lost a grant, it's on City Hall, not D.C.</p>
+        </div>
+      </div>
+
+      <div class="myth-fact-item">
+        <div class="myth-section">
+          <div class="myth-label">🚫 MYTH</div>
+          <p>"Abbott forced City Hall to raise taxes."</p>
+        </div>
+        <div class="fact-section">
+          <div class="fact-label">✅ FACT</div>
+          <p>State law just says: if the city wants more than the cap, it must ask voters. That's protection, not a mandate to hike.</p>
+        </div>
+      </div>
+
+      <div class="myth-fact-item">
+        <div class="myth-section">
+          <div class="myth-label">🚫 MYTH</div>
+          <p>"Prop Q fixes a budget shortfall."</p>
+        </div>
+        <div class="fact-section">
+          <div class="fact-label">✅ FACT</div>
+          <p>They never define the shortfall. Austin is pulling in record revenues — the issue is spending priorities, not missing money.</p>
+        </div>
+      </div>
+
+      <div class="myth-fact-item">
+        <div class="myth-section">
+          <div class="myth-label">🚫 MYTH</div>
+          <p>"Prop Q restores Trump's cuts."</p>
+        </div>
+        <div class="fact-section">
+          <div class="fact-label">✅ FACT</div>
+          <p>There's no such thing as city-specific "Trump cuts." It's a slogan to cover bad budgeting.</p>
+        </div>
+      </div>
+
+      <div class="myth-fact-item">
+        <div class="myth-section">
+          <div class="myth-label">🚫 MYTH</div>
+          <p>"Prop Q guarantees funds for homelessness, safety, parks, and libraries."</p>
+        </div>
+        <div class="fact-section">
+          <div class="fact-label">✅ FACT</div>
+          <p>The ballot language has no lockbox, no metrics, and no audits. Without accountability, it's just another blank check.</p>
+        </div>
+      </div>
+
+      <div class="myth-fact-item">
+        <div class="myth-section">
+          <div class="myth-label">🚫 MYTH</div>
+          <p>"Austin takes care of its own."</p>
+        </div>
+        <div class="fact-section">
+          <div class="fact-label">✅ FACT</div>
+          <p>Exactly — and that means living within record revenues, funding essentials first, and demanding results, not excuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="mt-4">
+    <h2>💰 How This Affects You</h2>
+    <div class="perspectives-grid">
+      <div class="content-card">
+        <h3>🏠 Homeowners</h3>
+        <p>City tax rate × taxable value = your bill. The TRE alone means <strong>$96.42 per $100k valuation</strong>. For a $500k home, that's <strong>$482/year more</strong> just from the City. Add Travis County and Central Health increases, and you're looking at much more.</p>
+        <div class="badge badge-danger">$482+ on $500k home</div>
+        <div class="badge badge-warning">Plus county/health increases</div>
+      </div>
+
+      <div class="content-card">
+        <h3>🏢 Renters</h3>
+        <p>Property taxes are landlords' major expense. Rate increases typically pass through to rent over time.</p>
+        <div class="badge badge-warning">Indirect but real impact</div>
+      </div>
+
+      <div class="content-card">
+        <h3>🏪 Small Businesses</h3>
+        <p>Commercial properties lack homestead protection. Rate changes directly impact operating costs.</p>
+        <div class="badge badge-danger">Full rate exposure</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voting Information -->
+  <section id="vote" class="mt-4">
+    <h2>🗳️ How to Vote</h2>
+    <div class="content-card info-card">
+      <div class="voting-grid">
+        <div class="voting-card">
+          <div class="voting-date">Nov 4</div>
+          <div class="voting-label">Election Day</div>
+          <div class="voting-detail">Tuesday, 7am – 7pm</div>
+        </div>
+
+        <div class="voting-card">
+          <div class="voting-date">Oct 20-31</div>
+          <div class="voting-label">Early Voting</div>
+          <div class="voting-detail">Times vary by location</div>
+        </div>
+
+        <div class="voting-card">
+          <div class="voting-date">Oct 7</div>
+          <div class="voting-label">Registration Deadline</div>
+          <div class="voting-detail">Must be registered to vote</div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="https://votetravis.com" target="_blank" class="btn btn-primary">Find Your Polling Place</a>
+        <a href="https://votetexas.gov" target="_blank" class="btn btn-secondary">Check Registration Status</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sources -->
+  <section id="sources" class="mt-4">
+    <h2>📚 Sources & Methodology</h2>
+    <div class="content-card">
+      <ul style="list-style-type: disc; padding-left: 2rem;">
+        <li>Primary sources: City of Austin Approved Budget Books and CAFRs, FY2015–FY2026</li>
+        <li>Austin Energy financial and operating reports</li>
+        <li>Figures rounded for clarity; departments reorganized for consistency</li>
+        <li>All data from publicly available documents</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-content">
+    <p>Campaign Archive - Prop Q was defeated November 5, 2025</p>
+    <p class="text-muted mt-2">This site provided factual information about Austin's Tax Rate Election.
+    All data sourced from official city documents.</p>
+    <p class="text-muted mt-2" style="font-style: italic;">This website is a personal project from a concerned resident of Austin. This is not affiliated nor paid for by any PAC or campaign.</p>
+  </div>
+</footer>
+
+<script>
+// Scroll Progress Indicator
+window.addEventListener('scroll', () => {
+  const winScroll = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('scrollIndicator').style.width = scrolled + '%';
+
+  // Add shadow to nav on scroll
+  const nav = document.getElementById('navContainer');
+  if (winScroll > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Set print date
+document.getElementById('print-date').textContent = new Date().toLocaleDateString();
+
+// Print event handler to update date
+window.addEventListener('beforeprint', function() {
+  document.getElementById('print-date').textContent = new Date().toLocaleDateString();
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '0';
+      entry.target.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        entry.target.style.transition = 'all 0.6s ease';
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }, 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+// Observe all content cards
+document.querySelectorAll('.content-card, .perspective-card, .voting-card').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
