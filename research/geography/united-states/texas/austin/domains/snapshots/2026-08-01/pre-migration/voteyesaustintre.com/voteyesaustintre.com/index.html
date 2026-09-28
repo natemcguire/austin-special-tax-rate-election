@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vote YES! Austin TRE — The Magical Money Carnival</title>
+<meta name="description" content="A satirical, carnival-style 'Vote YES' site for Austin's Tax Rate Election.">
+<style>
+/* ===== Psychedelic Carnival Theme (all inline) ===== */
+:root{
+  --bg:#0b1020;         /* midnight blue */
+  --ink:#eef6ff;        /* near white */
+  --muted:#b8d1ff;      /* soft blue */
+  --line:#223355;       /* deep divider */
+  --accent:#7dd3fc;     /* cyan */
+  --accent2:#a78bfa;    /* purple */
+  --accent3:#fb7185;    /* coral */
+  --gold:#fde68a;       /* marquee gold */
+  --green:#86efac;      /* mint green */
+  --pink:#fbcfe8;       /* cotton candy */
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:radial-gradient(1200px 600px at 10% -10%, #1c2b4d 0%, #0b1020 60%, #090d1a 100%);color:var(--ink);font:16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+
+header{
+  position:sticky;top:0;z-index:50;
+  background:linear-gradient(90deg, #0f1730, #131f3d);
+  border-bottom:2px solid var(--line);
+}
+.brand{
+  display:flex;align-items:center;gap:12px;padding:10px 0;
+}
+.logo{
+  width:38px;height:38px;border-radius:50%;
+  background:conic-gradient(from 0deg, #5eead4, #60a5fa, #c084fc, #5eead4);
+  animation:spin 10s linear infinite;border:2px solid #0ea5e9;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.nav{
+  display:flex;gap:10px;overflow:auto;padding:8px 0 12px 0;
+}
+.nav a{
+  text-decoration:none;color:#e2f0ff;font-weight:700;
+  background:linear-gradient(180deg,#1b2a55,#101a38);
+  border:1px solid #2a3e6a;border-radius:999px;padding:6px 10px;white-space:nowrap;
+}
+.nav a:hover{box-shadow:0 0 0 2px #2e4a86 inset;color:#fff}
+
+/* Hero marquee */
+.hero{
+  margin:18px 0 8px;
+  border:2px dashed #2b3f6e;border-radius:18px;overflow:hidden;
+  background:
+    radial-gradient(600px 200px at 10% -20%, rgba(124,58,237,.25), transparent 60%),
+    linear-gradient(180deg, rgba(13,20,45,.7), rgba(13,20,45,.35));
+}
+.marquee{
+  background:repeating-linear-gradient(90deg, var(--gold) 0 10px, #f59e0b 10px 20px);
+  color:#2a1800;font-weight:900;letter-spacing:.04em;text-transform:uppercase;
+  padding:6px 0;text-align:center;filter:drop-shadow(0 2px 0 #000);
+}
+h1{font-size:1.9rem;line-height:1.2;margin:16px}
+.sub{color:var(--muted);margin:0 16px 16px}
+
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid var(--line);border-radius:16px;padding:14px;margin:14px 0;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
+.kicker{display:inline-block;font-weight:900;letter-spacing:.06em;color:var(--accent2);text-transform:uppercase}
+.list{margin:8px 0 8px 22px}
+ul.list li{margin:8px 0}
+
+.ribbon{
+  background:linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-weight:900;letter-spacing:.03em;
+}
+
+.sign{
+  border:4px solid var(--gold);
+  background:radial-gradient(400px 200px at 30% 0%, #0ea5e9 0%, #1d2246 70%);
+  border-radius:18px;padding:16px;margin:18px 0;position:relative;text-align:center;
+  box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+.sign:before,.sign:after{
+  content:"";position:absolute;top:-10px;width:18px;height:18px;border-radius:50%;
+  background:var(--gold);box-shadow:0 0 0 3px #8a6b08 inset;
+}
+.sign:before{left:16px}.sign:after{right:16px}
+.sign h3{margin:0 0 8px 0;font-size:1.3rem;color:#fff}
+.sign a{
+  display:inline-block;text-decoration:none;color:#1a1300;background:var(--gold);
+  border:2px solid #8a6b08;border-radius:10px;padding:10px 14px;font-weight:900;
+}
+.sign a:hover{transform:rotate(-1deg) scale(1.02)}
+.note{color:var(--muted);font-size:.95rem}
+
+/* Two-column sections on wide screens */
+.grid{display:grid;gap:16px}
+@media(min-width:860px){ .grid-2{grid-template-columns:1.2fr .8fr} .grid-2.rev{grid-template-columns:.8fr 1.2fr}}
+
+/* Math Tent styles */
+.control{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:10px 0;
+}
+.control label{font-weight:700}
+.input{
+  background:#0f1730;color:#e9f2ff;border:1px solid #334a7a;border-radius:10px;padding:8px 10px;min-width:120px
+}
+.range{accent-color:#60a5fa;width:220px}
+.big-number{
+  font-size:1.6rem;font-weight:900;color:var(--green);text-shadow:0 2px 0 rgba(0,0,0,.3)
+}
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th,.table td{border-bottom:1px solid #23385f;padding:8px;text-align:right}
+.table th:first-child,.table td:first-child{text-align:left}
+.table tr:hover{background:rgba(255,255,255,.03)}
+.badge{
+  display:inline-block;background:linear-gradient(90deg,#0ea5e9,#6366f1);
+  padding:3px 8px;border-radius:999px;font-size:.85rem;font-weight:800;color:#001022
+}
+
+.footer{color:var(--muted);border-top:1px solid var(--line);padding:20px 0 60px}
+
+/* Fun wobble for headings */
+@keyframes wobble{
+  0%,100%{transform:rotate(0deg)} 25%{transform:rotate(-1.2deg)} 75%{transform:rotate(1.2deg)}
+}
+.wobble{animation:wobble 4s ease-in-out infinite}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <div class="kicker">Welcome to</div>
+        <div class="ribbon" style="font-size:1.1rem">The Magical Money Carnival</div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Site">
+      <a href="index.html#why">Why Vote YES?</a>
+      <a href="index.html#perks">Attractions</a>
+      <a href="index.html#math">Math Tent</a>
+      <a href="index.html#timeline">Voting Info</a>
+      <a href="index.html#fineprint">Small Print</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="marquee">Vote YES on the Tax Rate Increase — Because Austin just isn't expensive enough!</div>
+    <h1 class="wobble">Let’s crank the rate and ride the budget rollercoaster.</h1>
+    <p class="sub">This is a satirical page. It reads like a “YES” campaign, but it’s really a funhouse mirror for the policy.</p>
+  </section>
+
+  <section id="why" class="card">
+    <h2 class="ribbon">Why Vote YES?</h2>
+    <ul class="list">
+      <li><strong>Keep the mystery alive:</strong> <em>Are they even coming?</em> Underfunded police = edge-of-your-seat living.</li>
+      <li><strong>Permanent street chaos:</strong> No treatment, no outcomes, just vibes. It’s performance art at city scale.</li>
+      <li><strong>More overhead, less frontline:</strong> Internal departments you’ve never heard of, now with extra sparkle.</li>
+      <li><strong>Debt with confetti:</strong> Because every carnival needs a ballooning balloon budget.</li>
+    </ul>
+    <p class="note">We’re poking fun at priorities and tradeoffs—aimed at systems, not people.</p>
+  </section>
+
+  <section id="perks" class="card">
+    <h2 class="ribbon">Attractions & Community Perks</h2>
+    <ul class="list">
+      <li>Budget growth outpacing population by a <strong>wide margin</strong>.</li>
+      <li><strong>Debt service</strong> that could be its own theme park land.</li>
+      <li>“<strong>Internal Services & Transfers</strong>” bigger than Parks, Libraries, and Public Health combined.</li>
+      <li>And a totally unrelated community service: </li>
+    </ul>
+    <div class="sign" id="concealed">
+      <h3>🎯 Concealed Carry Classes</h3>
+      <a href="index.html#" aria-label="Concealed Carry Classes — Sponsorship Available">Sponsorship Available</a>
+      <div class="note" style="margin-top:8px">This is a faux link for satire. No classes here—yet.</div>
+    </div>
+  </section>
+
+  <section id="math" class="card">
+    <h2 class="ribbon">🎪 The Math Tent: Ten-Year “Max-Out” Hypothetical</h2>
+    <p>Curious what happens if a top-end increase is approved each year for the next 10 budgets? Spin the dials below. This is an <strong>illustrative</strong> compounding scenario, not a prediction or legal limit.</p>
+
+    <div class="control">
+      <label for="bill">Your current <em>city</em> property tax (annual):</label>
+      <input id="bill" class="input" type="number" min="0" step="50" value="1500">
+      <label for="rate">Assumed annual increase:</label>
+      <input id="rate" class="range" type="range" min="3" max="12" step="0.5" value="8" oninput="rateOut.textContent=this.value+'%'">
+      <span id="rateOut" class="badge">8%</span>
+      <button id="calc" class="input" style="cursor:pointer;font-weight:800">Compute 🎟️</button>
+    </div>
+
+    <div id="result" class="card" style="background:rgba(96,165,250,.08)">
+      <div><strong>Year 10 Bill (illustrative):</strong> <span id="y10" class="big-number">$—</span></div>
+      <div class="note">Increase vs today: <span id="delta">—</span> | Cumulative extra paid over 10 years: <span id="cum">—</span></div>
+
+      <table class="table" aria-label="Ten-year projection table">
+        <thead>
+          <tr><th>Year</th><th>Rate Assumed</th><th>Bill</th><th>Change vs Today</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+    <p class="note">Assumes the same percentage increase each year applied to the <em>city portion</em> of your bill. Actual outcomes depend on appraisal changes, exemptions, policy choices, and law.</p>
+  </section>
+
+  <section id="timeline" class="card">
+    <h2 class="ribbon">Voting Info</h2>
+    <ul class="list">
+      <li><strong>Election Day:</strong> Will Update When Election Date is Finalized</li>
+      <li><strong>Early Voting:</strong> Will Update When Election Date is Finalized</li>
+      <li><strong>Voter Registration Deadline:</strong> Will Update When Election Date is Finalized</li>
+      <li><strong>Where to vote:</strong> Will Update When Election Date is Finalized</li>
+    </ul>
+  </section>
+
+  <section id="fineprint" class="footer">
+    <p><strong>Small Print:</strong> This is satire—critique aimed at budget priorities and incentives. Numbers in the Math Tent are illustrative to show how compounding works, not legal advice or forecasts.</p>
+  </section>
+</main>
+
+<script>
+(function(){
+  const bill = document.getElementById('bill');
+  const rate = document.getElementById('rate');
+  const calc = document.getElementById('calc');
+  const rows = document.getElementById('rows');
+  const y10 = document.getElementById('y10');
+  const delta = document.getElementById('delta');
+  const cum = document.getElementById('cum');
+  const fmt = v => v.toLocaleString(undefined,{style:'currency',currency:'USD',maximumFractionDigits:0});
+
+  function compute(){
+    const base = Math.max(0, Number(bill.value)||0);
+    const r = (Number(rate.value)||0)/100;
+    rows.innerHTML = '';
+    let cumulativeExtra = 0;
+    let yVal = base;
+    for(let y=1;y<=10;y++){
+      yVal = base * Math.pow(1+r, y);
+      const change = yVal - base;
+      cumulativeExtra += change;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>Year ${y}</td><td>${(r*100).toFixed(1)}%</td><td>${fmt(yVal)}</td><td>${fmt(change)}</td>`;
+      rows.appendChild(tr);
+    }
+    y10.textContent = fmt(base * Math.pow(1+r, 10));
+    delta.textContent = fmt(base * Math.pow(1+r, 10) - base);
+    cum.textContent = fmt(cumulativeExtra);
+  }
+
+  calc.addEventListener('click', compute);
+  compute();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Austin City Council - Tax Rate Election Voting Positions</title>
+  <meta name="description" content="Austin City Council members and their positions on the tax rate election increase." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+         body {
+       margin: 0;
+       background: linear-gradient(115deg, #f5f7fb 0%, #ffffff 45%, #fafbfe 100%);
+       color: #111316;
+       font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+       font-size: 16px;
+       line-height: 1.55;
+     }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+         h1 {
+       text-align: center;
+       font-family: 'Playfair Display', Georgia, serif;
+       font-size: 3.5rem;
+       font-weight: 900;
+       margin-bottom: 10px;
+       color: #111316;
+       text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+       letter-spacing: -1px;
+     }
+    
+         .subtitle {
+       text-align: center;
+       font-family: 'Playfair Display', Georgia, serif;
+       font-size: 1.4rem;
+       font-weight: 700;
+       color: #60656f;
+       margin-bottom: 30px;
+       font-style: italic;
+       letter-spacing: 0.5px;
+     }
+    
+    .voting-summary {
+      background: #fafbfe;
+      border: 1px solid #e9edf2;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+         .voting-summary h2 {
+       color: #111316;
+       margin-top: 0;
+       font-family: 'Playfair Display', Georgia, serif;
+       font-weight: 700;
+       font-size: 1.8rem;
+       letter-spacing: -0.5px;
+     }
+    
+    .council-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    
+    .council-member {
+      background: #fafbfe;
+      border: 1px solid #e9edf2;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .council-member:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .member-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #e9edf2;
+    }
+    
+    .member-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #111316;
+      margin-bottom: 5px;
+    }
+    
+    .member-title {
+      color: #60656f;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .voting-position {
+      background: #fff;
+      border: 1px solid #e9edf2;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 0.9rem;
+      color: #60656f;
+    }
+    
+    .position-5 { border-left: 4px solid #dc3545; }
+    .position-3-5 { border-left: 4px solid #fd7e14; }
+    .position-2 { border-left: 4px solid #28a745; }
+
+    .vote-banner {
+      background: #0066cc;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .vote-banner a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .vote-banner a:hover {
+      color: #ffed4e;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="vote-banner">
+    Go Vote November 4th! <a href="https://votetravis.gov/current-election-information/current-election/" target="_blank">Find Your Polling Information</a>
+  </div>
+
+  <div class="container">
+    <h1>Austin City Council</h1>
+    <p class="subtitle">Tax Rate Election Voting Positions</p>
+    
+    <div class="voting-summary">
+      <h2>Tax Rate Election Results</h2>
+      <p><strong>The majority coalition won with a 5% tax rate election</strong></p>
+      <ul style="list-style: none; padding: 0; margin: 15px 0;">
+        <li style="margin: 8px 0;">✅ <strong>Majority Position:</strong> 5% tax rate increase</li>
+        <li style="margin: 8px 0;">🏛️ <strong>Mayor Watson:</strong> Wanted 3.5%</li>
+        <li style="margin: 8px 0;">💼 <strong>CM Duchen:</strong> Wanted 2%</li>
+      </ul>
+      <p style="font-style: italic; color: #60656f;font-size:150%;">Vote <strong>NO</strong> on Austin City Council's out of control spending.</p>
+    </div>
+    
+    <div class="council-grid">
+      <!-- Mayor -->
+      <div class="council-member">
+        <img src="images/Kirk%20Watson-mayor-Headshot.jpg" alt="Kirk Watson" class="member-photo" />
+        <div class="member-name">Kirk Watson</div>
+        <div class="member-title">Mayor</div>
+        <div class="voting-position position-3-5">
+          <strong>Position:</strong> Wanted 3.5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 1 -->
+      <div class="council-member">
+        <img src="images/NHarper-Madison_New2021_240x240.jpg" alt="Natasha Harper-Madison" class="member-photo" />
+        <div class="member-name">Natasha Harper-Madison</div>
+        <div class="member-title">Mayor Pro-Tem, District 1</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 2 -->
+      <div class="council-member">
+        <img src="images/Fuentes_Vanessa_2025_240x240.png" alt="Vanessa Fuentes" class="member-photo" />
+        <div class="member-name">Vanessa Fuentes</div>
+        <div class="member-title">Council Member, District 2</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 3 -->
+      <div class="council-member">
+        <img src="images/Jose%20Velasquez-D3Headshot-240x240.jpg" alt="José Velásquez" class="member-photo" />
+        <div class="member-name">José Velásquez</div>
+        <div class="member-title">Council Member, District 3</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 4 -->
+      <div class="council-member">
+        <img src="images/JVela_240x240-2022.jpg" alt="José 'Chito' Vela" class="member-photo" />
+        <div class="member-name">José "Chito" Vela</div>
+        <div class="member-title">Council Member, District 4</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 5 -->
+      <div class="council-member">
+        <img src="images/Alter_Ryan_2025_240x240.png" alt="Ryan Alter" class="member-photo" />
+        <div class="member-name">Ryan Alter</div>
+        <div class="member-title">Council Member, District 5</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 6 -->
+      <div class="council-member">
+        <img src="images/Laine_Krista_2025_240x240.png" alt="Krista Laine" class="member-photo" />
+        <div class="member-name">Krista Laine</div>
+        <div class="member-title">Council Member, District 6</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 7 -->
+      <div class="council-member">
+        <img src="images/Seigel_Mike_2025_240x240.png" alt="Mike Siegel" class="member-photo" />
+        <div class="member-name">Mike Siegel</div>
+        <div class="member-title">Council Member, District 7</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 8 -->
+      <div class="council-member">
+        <img src="images/paige-ellis-headshot.jpg" alt="Paige Ellis" class="member-photo" />
+        <div class="member-name">Paige Ellis</div>
+        <div class="member-title">Council Member, District 8</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 9 -->
+      <div class="council-member">
+        <img src="images/zo-qadri-headshot.jpg" alt="Zohaib 'Zo' Qadri" class="member-photo" />
+        <div class="member-name">Zohaib "Zo" Qadri</div>
+        <div class="member-title">Council Member, District 9</div>
+        <div class="voting-position position-5">
+          <strong>Position:</strong> Supported 5% tax rate increase
+        </div>
+      </div>
+      
+      <!-- District 10 -->
+      <div class="council-member">
+        <img src="images/Duchen_Marc_2025_240x240.png" alt="Marc Duchen" class="member-photo" />
+        <div class="member-name">Marc Duchen</div>
+        <div class="member-title">Council Member, District 10</div>
+        <div class="voting-position position-2">
+          <strong>Position:</strong> Wanted 2% tax rate increase
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

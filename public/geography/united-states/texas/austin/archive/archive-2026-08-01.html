@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Austin Tax Rate Archive | Budgets, Rates & Proposition Q</title>
+  <meta name="description" content="A year-over-year archive of Austin city budgets, property tax rates, the 2025 Proposition Q election, and the proposed 2026-27 budget." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Austin Tax Rate Archive" />
+  <meta property="og:description" content="Follow Austin's city budget and property tax rate year over year, from the 2025 Proposition Q election to the proposed 2026-27 budget." />
+  <meta property="og:url" content="https://austintaxrateelection.com/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="canonical" href="https://austintaxrateelection.com/archive-2026-08-01.html" />
+
+  <script defer src="analytics.js"></script>
+
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --success-green: #2E7D32;
+      --dark-green: #1B5E20;
+      --pure-white: #FFFFFF;
+      --off-white: #F5F5F5;
+      --dark-gray: #212121;
+      --medium-gray: #616161;
+      --light-gray: #E0E0E0;
+      --accent-blue: #1976D2;
+      --light-blue: #E3F2FD;
+      --warning-orange: #EF6C00;
+      --warning-light: #FFF3E0;
+      --archive-navy: #132238;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--dark-gray);
+      background: var(--pure-white);
+      font-weight: 400;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1.5rem 3rem;
+      background: linear-gradient(135deg, #E8F5E9 0%, var(--pure-white) 100%);
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--success-green);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 600;
+      color: var(--dark-gray);
+      margin-bottom: 2rem;
+      line-height: 1.4;
+    }
+
+    /* Results Card */
+    .results-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      margin: 3rem auto;
+      max-width: 700px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 3px solid var(--success-green);
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .results-header h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--dark-gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .results-date {
+      font-size: 1rem;
+      color: var(--medium-gray);
+      font-weight: 500;
+    }
+
+    .vote-results {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .vote-box {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .vote-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .vote-box.winning {
+      background: linear-gradient(135deg, var(--success-green) 0%, var(--dark-green) 100%);
+      color: var(--pure-white);
+      box-shadow: 0 4px 20px rgba(46, 125, 50, 0.3);
+    }
+
+    .vote-box.losing {
+      background: var(--off-white);
+      color: var(--dark-gray);
+    }
+
+    .vote-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    .vote-percentage {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .vote-count {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      font-weight: 600;
+    }
+
+    .total-votes {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--light-gray);
+      font-size: 1rem;
+      color: var(--medium-gray);
+      font-weight: 600;
+    }
+
+    /* Content Sections */
+    .content-section {
+      margin: 3rem 0;
+    }
+
+    .content-section h2 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--dark-gray);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .content-section h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 100%;
+      background: var(--success-green);
+      border-radius: 3px;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--dark-gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .content-section strong {
+      color: var(--success-green);
+      font-weight: 700;
+    }
+
+    /* Call to Action */
+    .cta-card {
+      background: linear-gradient(135deg, var(--accent-blue) 0%, #1565C0 100%);
+      color: var(--pure-white);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      margin: 3rem 0;
+      box-shadow: 0 8px 32px rgba(25, 118, 210, 0.3);
+    }
+
+    .cta-card h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: var(--pure-white);
+    }
+
+    .cta-card h2::before {
+      display: none;
+    }
+
+    .cta-card p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: var(--pure-white);
+    }
+
+    .cta-card ul {
+      text-align: left;
+      max-width: 600px;
+      margin: 2rem auto;
+      list-style: none;
+      padding: 0;
+    }
+
+    .cta-card li {
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .cta-card li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      padding: 1.2rem 2.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+      background: var(--pure-white);
+      color: var(--accent-blue);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+      background: var(--off-white);
+    }
+
+    .btn-success {
+      background: var(--success-green);
+      color: var(--pure-white);
+    }
+
+    .btn-success:hover {
+      background: var(--dark-green);
+    }
+
+    /* Info Box */
+    .info-box {
+      background: var(--light-blue);
+      border-left: 5px solid var(--accent-blue);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: var(--dark-gray);
+    }
+
+    /* Archive Link */
+    .archive-link {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--off-white);
+      border-radius: 12px;
+    }
+
+    .archive-link a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .archive-link a:hover {
+      border-bottom-color: var(--accent-blue);
+    }
+
+    .update-banner {
+      background: var(--archive-navy);
+      color: var(--pure-white);
+      padding: 0.9rem 1.5rem;
+      text-align: center;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .eyebrow {
+      color: var(--accent-blue);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--warning-light);
+      color: #9A4100;
+      margin-bottom: 1rem;
+    }
+
+    .snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .snapshot-card {
+      border: 1px solid var(--light-gray);
+      border-radius: 14px;
+      padding: 1.5rem;
+      background: var(--pure-white);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+
+    .snapshot-number {
+      color: var(--archive-navy);
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .snapshot-label {
+      color: var(--medium-gray);
+      font-size: 0.9rem;
+      font-weight: 650;
+      line-height: 1.4;
+      margin-top: 0.5rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--light-gray);
+      border-radius: 12px;
+    }
+
+    .rate-table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      background: var(--pure-white);
+      font-size: 0.95rem;
+    }
+
+    .rate-table th,
+    .rate-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 1rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    .rate-table th {
+      color: var(--pure-white);
+      background: var(--archive-navy);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .rate-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .rate-table .proposed-row {
+      background: #FFFDF8;
+    }
+
+    .timeline {
+      border-left: 3px solid var(--accent-blue);
+      margin: 2rem 0 2rem 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 2rem 0;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0.45rem;
+      width: 0.85rem;
+      height: 0.85rem;
+      border: 3px solid var(--pure-white);
+      border-radius: 50%;
+      background: var(--accent-blue);
+      box-shadow: 0 0 0 2px var(--accent-blue);
+    }
+
+    .timeline-date {
+      color: var(--accent-blue);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .timeline-item h3 {
+      color: var(--archive-navy);
+      font-size: 1.25rem;
+      margin: 0.2rem 0 0.4rem;
+    }
+
+    .timeline-item p {
+      color: var(--dark-gray);
+      font-size: 1rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .source-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .source-list li {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--light-gray);
+      line-height: 1.5;
+    }
+
+    .source-list a {
+      color: var(--accent-blue);
+      font-weight: 700;
+    }
+
+    .method-note {
+      color: var(--medium-gray);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-gray);
+      color: var(--pure-white);
+      padding: 2.5rem 1.5rem;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+      color: var(--light-gray);
+    }
+
+    footer p:first-child {
+      color: var(--pure-white);
+      font-weight: 600;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3rem 1rem 2rem;
+      }
+
+      .results-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .vote-results {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .vote-percentage {
+        font-size: 3rem;
+      }
+
+      .content-section h2 {
+        font-size: 1.8rem;
+      }
+
+      .cta-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .cta-card h2 {
+        font-size: 1.6rem;
+      }
+
+      .snapshot-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body><aside style="padding:16px;background:#132238;color:white;text-align:center">Historical snapshot · August 1, 2026. Proposed figures below are preserved as published, not current guidance. <a style="color:white;text-decoration:underline" href="/">Read current coverage →</a></aside>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <p class="eyebrow">Budgets · Property taxes · Elections</p>
+    <h1>Austin Tax Rate Archive</h1>
+    <p class="subtitle">Follow the rate, the budget, and the outcome year over year</p>
+  </div>
+
+  <div class="update-banner">
+    Updated August 1, 2026 · The FY 2026-27 budget and 57.9530¢ tax rate are proposed, not final
+  </div>
+
+  <div class="container">
+    <div class="content-section">
+      <span class="status-pill">Decision pending August 12–14</span>
+      <h2>The Latest: A Higher Rate Is Back</h2>
+      <p>
+        Less than a year after Austin voters rejected a 57.4017¢ city property tax rate, the City Manager has proposed a <strong>57.9530¢ rate</strong> for fiscal year 2026-27. This time, the City describes the proposal as the voter-approval rate—the highest calculated rate it can adopt without another tax-rate election.
+      </p>
+      <p>
+        The proposal is part of a <strong>$6.625 billion</strong> citywide operating budget. For the City's example median non-senior homestead, the estimated City property tax bill rises from $2,074.28 to <strong>$2,248.15</strong>, an increase of $173.87. The City says the combined annual increase from property tax and proposed utility and service rates would be $345.95 for its typical tax-and-ratepayer example.
+      </p>
+      <p>
+        On July 30, Council approved a maximum proposed rate for the required notice and public hearing. The action record expressly says that was <strong>not the final vote</strong> to set the FY 2026-27 tax rate; adoption remains scheduled to begin August 12.
+      </p>
+
+      <div class="snapshot-grid">
+        <div class="snapshot-card">
+          <div class="snapshot-number">57.9530¢</div>
+          <div class="snapshot-label">Proposed City tax rate per $100 of taxable value</div>
+        </div>
+        <div class="snapshot-card">
+          <div class="snapshot-number">+$173.87</div>
+          <div class="snapshot-label">Estimated annual City property tax increase for the median homestead example</div>
+        </div>
+        <div class="snapshot-card">
+          <div class="snapshot-number">+$301.1M</div>
+          <div class="snapshot-label">Increase in total citywide spending from the FY 2025-26 amended budget</div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <p><strong>Important distinction:</strong> Proposition Q asked voters for a rate five cents above the 2025 voter-approval rate. The 2026-27 proposal goes up to the newly calculated voter-approval rate, so it is a different legal path even though the proposed total rate is now higher than the rate voters rejected.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>The Rate, Year Over Year</h2>
+      <div class="table-wrap">
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th>Fiscal year</th>
+              <th>Original Council / Manager position</th>
+              <th>Effective or proposed rate</th>
+              <th>Median homestead City tax</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2024-25</strong></td>
+              <td>Rate adopted within the legal limit</td>
+              <td><strong>47.7600¢</strong></td>
+              <td>$1,969.52</td>
+              <td>Baseline year</td>
+            </tr>
+            <tr>
+              <td><strong>2025-26</strong></td>
+              <td>57.4017¢ adopted contingent on Proposition Q</td>
+              <td><strong>52.4017¢</strong></td>
+              <td>$2,074.28</td>
+              <td>Voters rejected the extra 5¢; Council amended the budget</td>
+            </tr>
+            <tr class="proposed-row">
+              <td><strong>2026-27</strong></td>
+              <td>57.9530¢ proposed at the voter-approval rate</td>
+              <td><strong>57.9530¢ proposed</strong></td>
+              <td>$2,248.15 estimated</td>
+              <td>Not final as of August 1, 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="method-note">
+        Tax bills use the City's median non-senior homestead examples and include the 20% general homestead exemption. Because the example home value changes each year, tax-bill changes do not equal the percentage change in the tax rate.
+      </p>
+    </div>
+
+    <div class="content-section">
+      <h2>How We Got Here</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">August 14, 2025</div>
+          <h3>Council adopts a $6.3B budget contingent on a tax election</h3>
+          <p>Council set a 57.4017¢ rate—five cents above the 52.4017¢ voter-approval rate—and placed Proposition Q on the November ballot.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">November 4, 2025</div>
+          <h3>Proposition Q is defeated</h3>
+          <p>63.47% voted against the higher rate and 36.53% voted for it. The contingent five-cent increment could not take effect.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">November 20, 2025</div>
+          <h3>Council adopts the amended budget</h3>
+          <p>The final rate became 52.4017¢. The General Fund was reduced by $95.38 million from the August version, including $109.48 million less property tax revenue, while selected EMS, mental-health, and homelessness items were restored or increased.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">July 10–16, 2026</div>
+          <h3>The next proposal uses the full new cap</h3>
+          <p>The City Manager released and presented a $6.625 billion proposal using a 57.9530¢ voter-approval rate. The plan also proposes $5.1 million in social-service provider grant reductions and moves $19.4 million into City-operated shelter budgets; the City says that transfer does not change total funding.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">July 30, 2026</div>
+          <h3>Council advances the rate process and new audit measures</h3>
+          <p>Council approved the maximum proposed rate and set an August 12 tax-rate hearing, without taking final action on the rate. It also advanced an efficiency-initiative charter amendment to the November 3 ballot and approved a comprehensive citywide efficiency-study contract.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">August 12–14, 2026</div>
+          <h3>Scheduled budget adoption</h3>
+          <p>Council can amend the Manager's proposal before adopting the final budget and tax rate. This archive will replace proposed figures with adopted figures when that vote is complete.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Card -->
+    <div class="results-card">
+      <div class="results-header">
+        <h2>2025 Proposition Q Results</h2>
+        <p class="results-date">Election Day: November 4, 2025</p>
+      </div>
+
+      <div class="vote-results">
+        <div class="vote-box winning">
+          <div class="vote-label">Against</div>
+          <div class="vote-percentage">63.47%</div>
+          <div class="vote-count">109,375 votes</div>
+        </div>
+
+        <div class="vote-box losing">
+          <div class="vote-label">For</div>
+          <div class="vote-percentage">36.53%</div>
+          <div class="vote-count">62,952 votes</div>
+        </div>
+      </div>
+
+      <div class="total-votes">
+        Total Votes Cast: 172,327
+      </div>
+    </div>
+
+    <!-- Victory Message -->
+    <div class="content-section">
+      <h2>What the 2025 Vote Changed</h2>
+      <p>
+        Proposition Q would have added five cents above the voter-approval rate and approximately $109.5 million in General Fund property tax revenue. After it failed, the tax rate fell from the contingent 57.4017¢ rate to <strong>52.4017¢</strong>.
+      </p>
+      <p>
+        The City's own examples show that the typical median homeowner's City property tax still increased by $104.76 for FY 2025-26. Compared with the contingent budget's estimate of a $302.64 increase, the election outcome avoided roughly <strong>$198 of that proposed annual increase</strong> for the City's example homeowner.
+      </p>
+    </div>
+
+    <div class="content-section">
+      <h2>What Changed in the Budget</h2>
+      <p>
+        The November 2025 amendment reduced the General Fund from $1.579 billion to $1.484 billion. It did not reduce the headline all-funds budget by the same amount because Austin Energy, Austin Water, Aviation, and other enterprise funds make up most of the citywide total.
+      </p>
+      <p>
+        For 2026-27, the Manager proposes increasing citywide spending by 4.8% to $6.625 billion while making departmental reductions and reallocations. The proposal is not final; service cuts, grants, rates, and fees can still change during Council adoption.
+      </p>
+    </div>
+
+    <div class="content-section">
+      <h2>What Changed in Oversight</h2>
+      <p>
+        On July 30, 2026, Council authorized a comprehensive efficiency study of City departments with Public Works LLC. The contract has an initial three-year term, up to two one-year extensions, and a maximum value of $5.23 million, subject to future funding.
+      </p>
+      <p>
+        Council also approved placing a charter amendment on the November 3, 2026 ballot that would require an independent affordability and efficiency initiative before any tax-rate increase and require the contractor to identify annual and multi-year savings. These are separate Council actions, not findings of a completed audit; this archive will track the study, the charter vote, and any documented savings.
+      </p>
+    </div>
+
+    <div class="cta-card">
+      <h2>What This Archive Will Track</h2>
+      <p>
+        Each budget cycle will be added to the record using the same questions:
+      </p>
+      <ul>
+        <li>What rate was first proposed, and what rate was finally adopted?</li>
+        <li>Was the rate below, at, or above the voter-approval threshold?</li>
+        <li>How did the median homestead bill and other City fees change?</li>
+        <li>Which programs were added, reduced, transferred, or restored?</li>
+        <li>How did the final result compare with the public case made the year before?</li>
+      </ul>
+      <a href="mailto:austintaxrateelection@gmail.com?subject=Austin%20Tax%20Rate%20Archive%20Source" class="btn">Submit a Source or Correction</a>
+    </div>
+
+    <div class="content-section" id="sources">
+      <h2>Source Record</h2>
+      <p>Primary documents are used for rates and dollar figures. Local reporting is included for context and to preserve the public record.</p>
+      <ul class="source-list">
+        <li><a href="https://www.austintexas.gov/communications/news/austin-city-council-approves-63-billion-fiscal-year-2025-2026-budget">City of Austin: Council approves the original FY 2025-26 budget</a></li>
+        <li><a href="https://services.austintexas.gov/edims/document.cfm?id=459065">Official Proposition Q ballot language</a></li>
+        <li><a href="https://services.austintexas.gov/edims/document.cfm?id=462660">City canvass backup: certified Travis, Hays, and Williamson results</a></li>
+        <li><a href="https://www.austintexas.gov/communications/news/austin-city-council-approves-amended-fiscal-year-2025-2026-budget">City of Austin: Council approves the amended FY 2025-26 budget</a></li>
+        <li><a href="https://austin.widen.net/view/pdf/api2uaye8r/FY26-Proposed-Amended-Budget-Comparison-Chart.pdf?t.download=true">City of Austin: original-versus-amended General Fund comparison</a></li>
+        <li><a href="https://www.austintexas.gov/communications/news/austins-66-billion-proposed-budget-focused-fiscal-sustainability-enable-high">City of Austin: FY 2026-27 proposed budget announcement</a></li>
+        <li><a href="https://austin.widen.net/s/t8qbx9lhlg/fy-2026-2027-taxpayer-impact-statement">City of Austin: FY 2026-27 taxpayer impact statement</a></li>
+        <li><a href="https://cbsaustin.com/news/local/austin-releases-proposed-66b-budget-with-higher-property-tax-rate-and-social-grant-cuts">CBS Austin: proposed budget, higher rate, and grant reductions</a></li>
+        <li><a href="https://services.austintexas.gov/council_meetings/action_notes.cfm?mid=1492">City of Austin: July 30 rate, efficiency study, and charter-election actions</a></li>
+        <li><a href="https://www.austintexas.gov/budget-excellence/city-budget">City budget portal and complete budget volumes</a></li>
+      </ul>
+      <p class="method-note">Research was expanded with the local STORM knowledge-curation project, then every figure published here was checked against the linked City documents. Campaign-era pages are preserved as historical material and may contain estimates or arguments that differ from final adopted figures.</p>
+    </div>
+
+    <!-- Archive Link -->
+    <div class="archive-link">
+      <p>
+        <a href="/prop-q-defeated.html">Open the complete 2025 Proposition Q campaign archive →</a>
+      </p>
+      <p style="margin-top: 1rem; color: var(--medium-gray);">
+        Original campaign analysis, letters, share graphics, and election materials
+      </p>
+    </div>
+
+    <div class="content-section">
+      <h2>Explore the Neutral Archive</h2>
+      <ul class="source-list">
+        <li><a href="/years/2025/">Certified 2025 Proposition Q record</a></li>
+        <li><a href="/years/2026-27/">FY 2026-27 proposal and adoption tracker</a></li>
+        <li><a href="/guides/property-tax-bill.html">How an Austin property-tax bill works</a></li>
+        <li><a href="/guides/tax-rate-elections.html">No-new-revenue and voter-approval rates explained</a></li>
+      </ul>
+    </div>
+
+    <div class="content-section">
+      <h2>Austin Civic Tax Network</h2>
+      <p>These related properties share the same evidence library and update cycle while keeping distinct editorial purposes.</p>
+      <ul class="source-list">
+        <li><a href="https://atxcitycouncil.com/">ATX City Council — fiscal votes, budget actions, and follow-through</a></li>
+        <li><a href="https://austincitycounciltaxincrease.com/">Austin City Tax Change — current-year City property-tax calculator</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Austin Tax Rate Archive</p>
+    <p style="margin-top: 1rem;">This website is a personal project from a concerned resident of Austin. This is not affiliated nor paid for by any PAC or campaign.</p>
+  </footer>
+
+</body>
+</html>

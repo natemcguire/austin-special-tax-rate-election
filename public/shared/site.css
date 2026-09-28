@@ -1,0 +1,30 @@
+:root { --ink:#172033; --muted:#5c667a; --paper:#f5f7fa; --card:#fff; --line:#dce2ea; --brand:#164d78; --accent:#d57b16; --ok:#237a45; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.65 Inter,system-ui,sans-serif; }
+a { color:var(--brand); }
+nav { background:#122238; color:#fff; }
+nav .wrap { display:flex; align-items:center; flex-wrap:wrap; gap:1rem; padding:1rem 1.25rem; }
+nav strong { margin-right:auto; } nav a { color:#fff; text-decoration:none; }
+.wrap { max-width:1080px; margin:auto; }
+.hero { padding:4.5rem 1.25rem; color:#fff; background:linear-gradient(130deg,#122238,var(--brand)); }
+.hero h1 { margin:.35rem 0 1rem; font-size:clamp(2.5rem,7vw,4.8rem); line-height:1; }
+.eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:.8rem; font-weight:800; opacity:.82; }
+main { padding:2.5rem 1.25rem 5rem; }
+h2 { margin-top:2.7rem; font-size:clamp(1.55rem,4vw,2.2rem); line-height:1.2; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin:1.5rem 0; }
+.card { padding:1.25rem; background:var(--card); border:1px solid var(--line); border-radius:14px; box-shadow:0 8px 22px rgba(20,35,55,.06); }
+.number { font-weight:850; font-size:2rem; line-height:1.1; }
+.muted { color:var(--muted); }
+.tag { display:inline-block; padding:.25rem .7rem; border-radius:999px; background:#fff0cb; color:#754600; font-size:.8rem; font-weight:800; text-transform:uppercase; }
+.callout { margin:1.5rem 0; padding:1rem 1.2rem; background:#fff8e7; border-left:5px solid var(--accent); }
+.timeline { padding-left:1.4rem; border-left:3px solid var(--brand); }
+.timeline article { margin-bottom:1.7rem; }
+.date { color:var(--brand); font-weight:800; }
+.table-wrap { overflow:auto; border:1px solid var(--line); border-radius:12px; }
+table { width:100%; border-collapse:collapse; background:#fff; } th,td { text-align:left; vertical-align:top; padding:.85rem; border-bottom:1px solid var(--line); } th { background:#eaf0f5; }
+label { display:block; font-weight:750; margin:.8rem 0 .25rem; }
+input { width:100%; padding:.8rem; border:1px solid #aeb8c6; border-radius:8px; font:inherit; }
+.calc-output { background:#122238; color:#fff; }
+.calc-output .number { font-size:2.4rem; }
+footer { padding:2rem 1.25rem; border-top:1px solid var(--line); color:var(--muted); text-align:center; }
+@media(max-width:620px){body{font-size:16px}.hero{padding:3rem 1rem}}

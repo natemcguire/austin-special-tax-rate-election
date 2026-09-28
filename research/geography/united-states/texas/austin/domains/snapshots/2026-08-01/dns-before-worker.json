@@ -1,0 +1,616 @@
+{
+  "captured_at": "2026-08-01T23:25:25.320Z",
+  "domains": [
+    {
+      "domain": "austintaxrateelection.com",
+      "zone_id": "48eb9a0c9e8ab8b30fc45cc72d4a99cb",
+      "records": [
+        {
+          "id": "09fad89304c371a52d2d89f3c741f192",
+          "name": "austintaxrateelection.com",
+          "type": "A",
+          "content": "185.199.111.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:46.07667Z",
+          "modified_on": "2026-03-28T15:16:46.07667Z"
+        },
+        {
+          "id": "545199431f1d18e900b07e290b168aa8",
+          "name": "austintaxrateelection.com",
+          "type": "A",
+          "content": "185.199.110.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:45.656234Z",
+          "modified_on": "2026-03-28T15:16:45.656234Z"
+        },
+        {
+          "id": "3381997e3bdbd8fa0a5293e7c38b8c0f",
+          "name": "austintaxrateelection.com",
+          "type": "A",
+          "content": "185.199.109.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:45.423307Z",
+          "modified_on": "2026-03-28T15:16:45.423307Z"
+        },
+        {
+          "id": "5686e0c1100773f26f1779b508b1e770",
+          "name": "austintaxrateelection.com",
+          "type": "A",
+          "content": "185.199.108.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:45.154199Z",
+          "modified_on": "2026-03-28T15:16:45.154199Z"
+        }
+      ]
+    },
+    {
+      "domain": "atxcitycouncil.com",
+      "zone_id": "6a536c7b65b2cad4087bb787f2c1d778",
+      "records": [
+        {
+          "id": "29d4586c7256f85e66f96d373500e59f",
+          "name": "atxcitycouncil.com",
+          "type": "A",
+          "content": "185.199.111.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:14.912332Z",
+          "modified_on": "2026-03-28T15:17:14.912332Z"
+        },
+        {
+          "id": "8b3a7945337d3653fd860388190f08ba",
+          "name": "atxcitycouncil.com",
+          "type": "A",
+          "content": "185.199.110.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:14.666626Z",
+          "modified_on": "2026-03-28T15:17:14.666626Z"
+        },
+        {
+          "id": "8225e3318aa66f2b251b52a08bb78061",
+          "name": "atxcitycouncil.com",
+          "type": "A",
+          "content": "185.199.109.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:14.361638Z",
+          "modified_on": "2026-03-28T15:17:14.361638Z"
+        },
+        {
+          "id": "fc487e286c3f3cd1ccde15954b1cded1",
+          "name": "atxcitycouncil.com",
+          "type": "A",
+          "content": "185.199.108.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:13.589038Z",
+          "modified_on": "2026-03-28T15:17:13.589038Z"
+        }
+      ]
+    },
+    {
+      "domain": "austincitycounciltaxincrease.com",
+      "zone_id": "2c61b274c4205a76570c5a3ac78e5ba1",
+      "records": [
+        {
+          "id": "d07d06d867b0ca86d260af6d5b04ed66",
+          "name": "austincitycounciltaxincrease.com",
+          "type": "A",
+          "content": "185.199.111.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:56.91379Z",
+          "modified_on": "2026-03-28T15:16:56.91379Z"
+        },
+        {
+          "id": "be92c8b12390d00098cbd63f9d8a9500",
+          "name": "austincitycounciltaxincrease.com",
+          "type": "A",
+          "content": "185.199.110.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:55.827734Z",
+          "modified_on": "2026-03-28T15:16:55.827734Z"
+        },
+        {
+          "id": "d1f38a3d8b0dee8819054911b1b4ed07",
+          "name": "austincitycounciltaxincrease.com",
+          "type": "A",
+          "content": "185.199.109.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:55.56756Z",
+          "modified_on": "2026-03-28T15:16:55.56756Z"
+        },
+        {
+          "id": "2f7861d1103d847ecaba8419ece44ba9",
+          "name": "austincitycounciltaxincrease.com",
+          "type": "A",
+          "content": "185.199.108.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:54.855725Z",
+          "modified_on": "2026-03-28T15:16:54.855725Z"
+        }
+      ]
+    },
+    {
+      "domain": "austincitycounciltax.com",
+      "zone_id": "1abd476c4423aeaaa255593b0d9d1b90",
+      "records": [
+        {
+          "id": "324809c4b8d29837ff5604b66c420886",
+          "name": "austincitycounciltax.com",
+          "type": "A",
+          "content": "185.199.111.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:05.827214Z",
+          "modified_on": "2026-03-28T15:17:05.827214Z"
+        },
+        {
+          "id": "606e74b06c0f6cc42ec05995174c4ac4",
+          "name": "austincitycounciltax.com",
+          "type": "A",
+          "content": "185.199.110.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:05.520934Z",
+          "modified_on": "2026-03-28T15:17:05.520934Z"
+        },
+        {
+          "id": "af2e3a3059d293a271ca31108f451605",
+          "name": "austincitycounciltax.com",
+          "type": "A",
+          "content": "185.199.109.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:05.122433Z",
+          "modified_on": "2026-03-28T15:17:05.122433Z"
+        },
+        {
+          "id": "cebfa2548f391dd50c56557adb77802d",
+          "name": "austincitycounciltax.com",
+          "type": "A",
+          "content": "185.199.108.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:17:04.717476Z",
+          "modified_on": "2026-03-28T15:17:04.717476Z"
+        }
+      ]
+    },
+    {
+      "domain": "austintre.com",
+      "zone_id": "df37fe67e1b6f6e3bcbd0cac7b04ce96",
+      "records": []
+    },
+    {
+      "domain": "voteaustintaxrateelection.com",
+      "zone_id": "71df5c9efdd71fdf13597f7fa983bfc7",
+      "records": [
+        {
+          "id": "832e735584e2ea52adeec4d32a6d8728",
+          "name": "www.voteaustintaxrateelection.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:45.275178Z",
+          "modified_on": "2026-03-28T14:59:45.275178Z"
+        }
+      ]
+    },
+    {
+      "domain": "defeataustintaxincrease.com",
+      "zone_id": "0e7ce0a92702e5e7526a7449a70a13b1",
+      "records": [
+        {
+          "id": "11b82cc7fddd418b30c58c4226473084",
+          "name": "www.defeataustintaxincrease.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T15:16:10.538758Z",
+          "modified_on": "2026-03-28T15:16:10.538758Z"
+        }
+      ]
+    },
+    {
+      "domain": "votenoaustin.com",
+      "zone_id": "4e6e1c4cd3cdfd052b1b70aded7ab441",
+      "records": [
+        {
+          "id": "5113629748f958c917b385b2aa2f20a7",
+          "name": "www.votenoaustin.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:38.493858Z",
+          "modified_on": "2026-03-28T14:59:38.493858Z"
+        }
+      ]
+    },
+    {
+      "domain": "loveaustincampaign.com",
+      "zone_id": "4f1d60f2ad94925a98366a339cb51b35",
+      "records": [
+        {
+          "id": "e7c44e79fdac6c034a76fe08a22b6247",
+          "name": "www.loveaustincampaign.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:58:30.324402Z",
+          "modified_on": "2026-03-28T14:58:30.324402Z"
+        }
+      ]
+    },
+    {
+      "domain": "loveaustinpropelection.com",
+      "zone_id": "67d36b975788d996ca00a8b91193bce7",
+      "records": [
+        {
+          "id": "ca9b5e07ee6963ecf0785908f69098b1",
+          "name": "www.loveaustinpropelection.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:58:23.721653Z",
+          "modified_on": "2026-03-28T14:58:23.721653Z"
+        }
+      ]
+    },
+    {
+      "domain": "loveaustinpropq.com",
+      "zone_id": "1d32ec84a0a02c655bed9a0bec370e02",
+      "records": [
+        {
+          "id": "76444a7212bd72a21fdc8434e4e3db13",
+          "name": "www.loveaustinpropq.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:58:16.487073Z",
+          "modified_on": "2026-03-28T14:58:16.487073Z"
+        }
+      ]
+    },
+    {
+      "domain": "propqloveaustin.com",
+      "zone_id": "c272865a45154b9eadf92326332ee0b1",
+      "records": [
+        {
+          "id": "7ab270e3c3d6e7f349a476b948d2da60",
+          "name": "www.propqloveaustin.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:56:55.37976Z",
+          "modified_on": "2026-03-28T14:56:55.37976Z"
+        }
+      ]
+    },
+    {
+      "domain": "voteloveaustin.com",
+      "zone_id": "cf50154a62c7d291866c645dc3b7aaee",
+      "records": [
+        {
+          "id": "deb2be04bb5b9632b9380c7d81f16442",
+          "name": "www.voteloveaustin.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:56:32.132688Z",
+          "modified_on": "2026-03-28T14:56:32.132688Z"
+        }
+      ]
+    },
+    {
+      "domain": "votenoloveaustin.com",
+      "zone_id": "44a7c440f9d837d80c52277111332489",
+      "records": [
+        {
+          "id": "d57c04e234bca35848962f2f84123016",
+          "name": "www.votenoloveaustin.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:56:25.387002Z",
+          "modified_on": "2026-03-28T14:56:25.387002Z"
+        }
+      ]
+    },
+    {
+      "domain": "voteyesaustin.com",
+      "zone_id": "ac4545aa8bd797ed3df08db5c4e3bf50",
+      "records": [
+        {
+          "id": "783d639e777183834b5ff2179df10e7e",
+          "name": "www.voteyesaustin.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:31.014707Z",
+          "modified_on": "2026-03-28T14:59:31.014707Z"
+        }
+      ]
+    },
+    {
+      "domain": "voteyesaustintre.com",
+      "zone_id": "83f085f440e51e8f670f11b168a09ee0",
+      "records": [
+        {
+          "id": "c4798dae444e7429764ad44687f3b2a7",
+          "name": "voteyesaustintre.com",
+          "type": "A",
+          "content": "185.199.111.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:23.269223Z",
+          "modified_on": "2026-03-28T14:59:23.269223Z"
+        },
+        {
+          "id": "01462addc7792e0a94a5f8d0eb70491f",
+          "name": "voteyesaustintre.com",
+          "type": "A",
+          "content": "185.199.110.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:22.75543Z",
+          "modified_on": "2026-03-28T14:59:22.75543Z"
+        },
+        {
+          "id": "e3a76a9d6d3b1ad146148712888dcd57",
+          "name": "voteyesaustintre.com",
+          "type": "A",
+          "content": "185.199.109.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:22.119003Z",
+          "modified_on": "2026-03-28T14:59:22.119003Z"
+        },
+        {
+          "id": "8cb68f0b72ba2260c6de0e6174fd083c",
+          "name": "voteyesaustintre.com",
+          "type": "A",
+          "content": "185.199.108.153",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 60,
+          "settings": {},
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:59:21.463602Z",
+          "modified_on": "2026-03-28T14:59:21.463602Z"
+        }
+      ]
+    },
+    {
+      "domain": "voteyesloveaustin.com",
+      "zone_id": "ed7237c2d0f03b719febebf1bae26696",
+      "records": [
+        {
+          "id": "459e2d1d5459d20d3d1f86aa23bcd7e0",
+          "name": "www.voteyesloveaustin.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:48:52.3176Z",
+          "modified_on": "2026-03-28T14:48:52.3176Z"
+        }
+      ]
+    },
+    {
+      "domain": "voteyespropq.com",
+      "zone_id": "b22eaf3e18ae1c6f56ff5fc4aead7bec",
+      "records": [
+        {
+          "id": "18b9b2fd5e278b14c56a7260af1bf276",
+          "name": "www.voteyespropq.com",
+          "type": "CNAME",
+          "content": "parkingpage.namecheap.com",
+          "proxiable": true,
+          "proxied": false,
+          "ttl": 1800,
+          "settings": {
+            "flatten_cname": false
+          },
+          "meta": {},
+          "comment": null,
+          "tags": [],
+          "created_on": "2026-03-28T14:48:03.80489Z",
+          "modified_on": "2026-03-28T14:48:03.80489Z"
+        }
+      ]
+    }
+  ]
+}

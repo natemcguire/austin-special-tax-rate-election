@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-site="tax-increase"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Austin City Tax Increase Calculator | FY 2026–27</title><meta name="description" content="You voted no on Prop Q. Council raised the City tax rate anyway. Enter your City taxable value and see how much more you pay under the adopted FY 2026-27 rate."><link rel="canonical" href="https://austincitycounciltaxincrease.com/"><link rel="stylesheet" href="/shared/site.css"><script defer src="/shared/analytics.js"></script></head>
+<body><nav><div class="wrap"><strong>Austin City Tax Increase</strong><a href="./">Calculator</a><a href="methodology.html">Method</a><a href="sources.html">Sources</a><a href="https://austintaxrateelection.com/">Prop I</a><a href="https://atxcitycouncil.com/">Council</a></div></nav><header class="hero"><div class="wrap"><p class="eyebrow">FY 2026–27 adopted rate</p><h1>How much more is City Hall taking?</h1><p>You voted no in November. Council raised the rate in August anyway, no election required. Put in your City taxable value and see your increase.</p></div></header>
+<main class="wrap"><span class="tag">Adopted rate</span><div class="grid"><div class="card"><div class="number">$0.524017</div><div class="muted">FY 2025–26 City rate per $100, after voters rejected Prop Q</div></div><div class="card"><div class="number">$0.579948</div><div class="muted">FY 2026–27 adopted City rate per $100. Higher than the 57.40¢ voters rejected.</div></div></div>
+<h2>Your increase</h2><div class="grid"><div class="card"><label for="priorValue">Prior-year City taxable value</label><input id="priorValue" type="number" min="0" step="1000" value="400000" inputmode="decimal"><label for="newValue">Current-year City taxable value</label><input id="newValue" type="number" min="0" step="1000" value="400000" inputmode="decimal"></div><div class="card calc-output" aria-live="polite"><div class="muted" style="color:#becadc">Your annual City tax increase</div><div class="number" id="change">+$223.72</div><p id="detail">Prior: $2,096.07 · Current: $2,319.79</p><p id="monthly">About $18.64 per month</p></div></div>
+<div class="callout"><strong>This is only the City of Austin line.</strong> Your actual bill also has the school district, county, community college, health district, and any special districts, plus utilities and fees. The City’s own combined example adds another $172.08 a year in rates and fees on top of the tax.</div>
+<div class="callout"><strong>Our position: vote YES on Prop I on November 3.</strong> Prop I does not change the number above. It puts an independent efficiency audit in the city charter and requires one before Council can hold another tax-rate election. Whichever way you lean, the side that makes City Hall justify the bill first is the side with less taxes. <a href="https://austintaxrateelection.com/">Read the case and the ballot language.</a></div>
+<h2>Why two taxable-value inputs?</h2><p>A rate-only comparison assumes your value stayed flat. Most people’s did not. Enter the City taxable value from each year’s appraisal notice or tax statement, after exemptions, and the calculator does the rest. Use taxable value, not market value.</p>
+<h2>The City’s own example</h2><p>The City says its typical homeowner pays $113.76 more this year in City property tax. That figure uses the City’s own example home and exemption assumptions. If your value went up more than theirs, so did your bill.</p>
+<p>The July 16 proposal used $0.579530 and a $173.87 typical-home increase. The adopted rate came in a fraction higher; the example came down because the City changed its example home. Both are documented on the <a href="sources.html">sources page</a>.</p><h2>Adopted record</h2><ul><li><a href="https://www.austintexas.gov/communications/news/austin-city-council-approves-66-billion-budget-fiscal-year-2026-2027">August 12 adopted-budget announcement and typical taxpayer impact</a></li><li><a href="https://www.austintexas.gov/budget-excellence/tax-rates">Official adopted rate, voter-approval rate and separate tax-rate vote</a></li><li><a href="https://www.austintexas.gov/budget-excellence/city-budget">Official budget documents and budget vote</a></li></ul><p><a href="methodology.html">Read the formula, limits, and test cases →</a></p></main><footer>A personal project from a concerned Austin resident · Estimate only, not a tax statement · Figures verified September 27, 2026</footer>
+<script>
+  (function () {
+    var priorRate = 0.524017;
+    var currentRate = 0.579948;
+    var priorInput = document.getElementById('priorValue');
+    var newInput = document.getElementById('newValue');
+    var money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+    function calculate() {
+      var priorValue = Math.max(0, Number(priorInput.value) || 0);
+      var newValue = Math.max(0, Number(newInput.value) || 0);
+      var priorTax = priorValue * priorRate / 100;
+      var currentTax = newValue * currentRate / 100;
+      var difference = currentTax - priorTax;
+      document.getElementById('change').textContent = (difference < 0 ? '−' : '+') + money.format(Math.abs(difference));
+      document.getElementById('detail').textContent = 'Prior: ' + money.format(priorTax) + ' · Current: ' + money.format(currentTax);
+      document.getElementById('monthly').textContent = (difference < 0 ? 'Decrease of ' : 'About ') + money.format(Math.abs(difference) / 12) + ' per month';
+    }
+    priorInput.addEventListener('input', calculate);
+    newInput.addEventListener('input', calculate);
+    calculate();
+  })();
+</script></body></html>
